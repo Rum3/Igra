@@ -1,0 +1,30 @@
+{
+  "id": "chapter_01_1",
+  "title": "Chapter 1: The Detective's Desk",
+  "content": "The rain in London never truly stops; it just changes form. Outside the window of your cramped office, neon lights from a nearby pub bleed through the smog, casting long, distorted shadows across your desk. It’s past midnight when a heavy yellow envelope is slid under your door. No knock. No footsteps trailing away. Just the official seal of the Metropolitan Police cutting through the dim light.||Inside are the case files for Thomas Vane — an investigative journalist found dead in his apartment. The official verdict? Suicide.||In this game, you are the investigator. No one will tell you what is true and what is a lie. As you read the documents, weigh things carefully: which details contradict each other? What seems staged? Your success depends on your ability to sift the important information from the noise.||The contents of the envelope are spread before you, alongside your work laptop. You need to examine all available sources to piece the picture together.",
+  "choices": [
+    {
+      "id": "c01_1_to_2a",
+      "text": "Examine the Crime Scene Report.",
+      "nextChapterId": "chapter_01_2a"
+    },
+    {
+      "id": "c01_1_to_2b",
+      "text": "Read Thomas Vane’s suicide note.",
+      "nextChapterId": "chapter_01_2b"
+    },
+    {
+      "id": "c01_1_to_2c",
+      "text": "Personal effects recovered from the scene.",
+      "nextChapterId": "chapter_01_2c"
+    },
+    {
+      "id": "c01_1_to_2g",
+      "text": "Search the internet for Thomas Vane's recent publications.",
+      "nextChapterId": "chapter_01_2g"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 1,
+  "backgroundImage": "chapter_1"
+}

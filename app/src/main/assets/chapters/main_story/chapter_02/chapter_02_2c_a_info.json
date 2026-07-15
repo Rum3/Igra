@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2c_a_info",
+  "title": "The Playground for Thieves",
+  "content": "Arthur: 'Oh, Thomas despised that place! He called it a playground for corporate thieves. He only went because his high-profile source insisted on meeting there.'\nYou: Under what name did you book the table?",
+  "choices": [
+    {
+      "id": "c02_2c_a4",
+      "text": "Get the reservation details",
+      "nextChapterId": "chapter_02_2c_final_success"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "assistent"
+}

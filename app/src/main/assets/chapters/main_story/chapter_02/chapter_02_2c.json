@@ -1,0 +1,20 @@
+{
+  "id": "chapter_02_2c",
+  "title": "Interrogations",
+  "content": "Using the handle you found in Vane's wallet and your own clearance, you open a secure, encrypted messaging app. You ping his widow and his personal assistant.||💬 Chat 1: Helen Vane (The Widow)\nHelen: Who is this? How did you get this encrypted handle?",
+  "choices": [
+    {
+      "id": "c02_2c_h1a",
+      "text": "'I'm an independent investigator. I believe Thomas was murdered.'",
+      "nextChapterId": "chapter_02_2c_h1"
+    },
+    {
+      "id": "c02_2c_h1b",
+      "text": "'A friend of Thomas. I'm trying to finish what he started.'",
+      "nextChapterId": "chapter_02_2c_h1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "chapter_2"
+}

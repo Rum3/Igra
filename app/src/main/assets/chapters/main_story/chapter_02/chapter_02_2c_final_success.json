@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2c_final_success",
+  "title": "Interrogation Outcome",
+  "content": "Arthur: 'I made the reservation under the alias 'Mr. Sterling' for 8:30 PM. Thomas explicitly told me to wipe the entry from his digital calendar immediately after. He was terrified of anyone tracking that meeting.'\n\n📊 OUTCOME: You successfully got the booking details from Arthur.||📝 FILES UPDATED: Reservation at 'The Blackwood' was booked under the alias 'Mr. Sterling' at 8:30 PM.\n📉 You lose 1 Action Point.",
+  "choices": [
+    {
+      "id": "c02_2c_fin_ok",
+      "text": "Back to the investigation hub",
+      "nextChapterId": "chapter_02_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "assistent"
+}

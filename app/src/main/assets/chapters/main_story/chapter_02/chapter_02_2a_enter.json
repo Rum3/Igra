@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2a_enter",
+  "title": "Inside The Blackwood",
+  "content": "'The Blackwood' is a cold, pretentious establishment boasting polished marble and waiters in sharp black suits—whose monthly salaries likely dwarf your yearly budget.\nYou approach the maître d' and show him a photo of Thomas Vane, asking who he dined with the previous afternoon.\nThe man looks you up and down with icy disdain: 'Sir, our establishment guarantees absolute discretion to our clientele. Without an official police warrant, we do not share reservation details or guest information.'\nYou attempt to question one of the floor waiters on his way to the kitchen, but he quickly brushes past you. Because you don't know who Thomas was meeting (you have no name, nor a reservation time), you have no leverage. You've wasted two hours in polite silence and paid for a bitter, overpriced espresso.\n\n🛑 OUTCOME: You find absolutely nothing. The staff refuses to cooperate.\n📉 You lose 1 Action Point.",
+  "choices": [
+    {
+      "id": "c02_2a_back",
+      "text": "Back to the investigation hub",
+      "nextChapterId": "chapter_02_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "resturant1"
+}

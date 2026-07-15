@@ -1,0 +1,30 @@
+{
+  "id": "chapter_02_1",
+  "title": "Chapter 2: Inconsistencies",
+  "content": "Suddenly, your phone buzzes. An encrypted email flashes on your screen from an unknown server. The sender's alias reads: 'SPIDER'. The text is brief: 'They think they buried him. They only buried the truth. I have the drive. Find me.'||The storm finally clears as the cold, gray London dawn breaks. You rub your tired eyes, realizing you've spent the entire night hunched over your desk, analyzing every line of the files under the dim glow of your lamp.||The clock is ticking. The Metropolitan Police are fast-tracking the paperwork. Both his widow and his assistant will soon be unreachable. You have just enough time to do exactly three things today before the sun goes down.||⚠️ DETECTIVE MECHANIC: ACTION POINTS\nYou have 3 Action Points. Every choice you make consumes 1 point. Choose wisely. One of these leads to a complete dead end.",
+  "choices": [
+    {
+      "id": "c02_1_to_2a",
+      "text": "🍽️ Investigate 'The Blackwood' Restaurant",
+      "nextChapterId": "chapter_02_2a"
+    },
+    {
+      "id": "c02_1_to_2b",
+      "text": "📄 Request and Analyze the Autopsy Report",
+      "nextChapterId": "chapter_02_2b"
+    },
+    {
+      "id": "c02_1_to_2c",
+      "text": "💬 Chat with Helen Vane (Widow)",
+      "nextChapterId": "chapter_02_2c"
+    },
+    {
+      "id": "c02_1_to_2d",
+      "text": "💬 Chat with Arthur Pendleton (Assistant)",
+      "nextChapterId": "chapter_02_2d"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "chapter_2_navigation"
+}

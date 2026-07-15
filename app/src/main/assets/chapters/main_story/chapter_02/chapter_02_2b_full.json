@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2b_full",
+  "title": "The Autopsy Report",
+  "content": "It is a sterile, official document:\nPOST-MORTEM EXAMINATION REPORT\nCase Ref: MET-2026-9941X\nDeceased: Vane, Thomas\nEXTERNAL EXAMINATION:\nTrauma: Single close-contact gunshot wound entry at the right temporal region. Minor subcutaneous ecchymosis (faint bruising) noted around the left volar wrist joint, measuring approximately 4cm. Dismissed as perimortem incidental contact.\nINTERNAL EXAMINATION & BIOLOGICAL METRICS:\nLiver Temperature: 29.4°C (84.9°F) recorded at scene arrival (09:15 AM).\nRigor Mortis: Fully established in upper and lower extremities.\nEstimated Time of Death: Based on rate of algor mortis and metabolic decomposition, physiological death is estimated to have occurred between 21:30 and 22:30 (9:30 PM - 10:30 PM) on the preceding evening.",
+  "choices": [
+    {
+      "id": "c02_2b_back",
+      "text": "Back to the investigation hub",
+      "nextChapterId": "chapter_02_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "altopsy"
+}

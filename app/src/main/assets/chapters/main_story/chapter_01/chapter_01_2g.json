@@ -1,0 +1,15 @@
+{
+  "id": "chapter_01_2g",
+  "title": "Web Search: Thomas Vane",
+  "content": "You open a secure browser window on your laptop and type his name into the search engine: Thomas Vane.\nThe digital trail is disappointingly clean. His recent articles for the paper are mostly standard, safe journalism—pieces on local council budget discrepancies and minor political disputes from months ago. There is absolutely nothing from the last few weeks. It’s as if he stopped writing entirely, or someone scrubbed his draft folder clean from the newspaper’s server.\nThe only recent mention of him is a brief, cold obituary posted on his employer's website:\n\"We are deeply saddened by the sudden passing of our colleague, Thomas Vane. Our thoughts are with his family during this difficult time.\"\nNo mention of what he was investigating. No comments allowed under the post. The digital world has already forgotten him. His final story was never published—and it certainly isn't anywhere on the public internet.",
+  "choices": [
+    {
+      "id": "c01_2g_to_1",
+      "text": "Back to the desk",
+      "nextChapterId": "chapter_01_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 1,
+  "backgroundImage": "chapter_1"
+}

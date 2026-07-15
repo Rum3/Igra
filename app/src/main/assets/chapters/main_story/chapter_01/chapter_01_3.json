@@ -1,0 +1,15 @@
+{
+  "id": "chapter_01_3",
+  "title": "The Notebook - Initial Doubts",
+  "content": "You open your leather-bound notebook and dip your pen in ink. The official story is crumbling. A locked room, a typewriter note from a tech-savvy writer, missing digital evidence, and an expensive dinner receipt.\n\nYou write down your primary vectors of investigation:\n\nClue 1: The Locked Room paradox – how did the killer leave if the door was bolted from the inside?\nClue 2: The Typewriter – the note was forced, not written willingly.\nClue 3: The Missing Laptop – the key to his final investigation is out there.\n\nSuddenly, your phone buzzes. An encrypted email flash on your screen from an unknown server. The sender's alias reads: 'SPIDER'.\nThe text is brief: 'They think they buried him. They only buried the truth. I have the drive. Find me.'",
+  "choices": [
+    {
+      "id": "c01_3_to_chapter_02",
+      "text": "Start Chapter 2: Discrepancies",
+      "nextChapterId": "chapter_02_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 1,
+  "backgroundImage": "chapter_1"
+}

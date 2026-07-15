@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2c_a_blocked",
+  "title": "Arthur Blocks You",
+  "content": "Arthur: 'You're bluffing. Lose this number. I'm blocking you.'\n⚠️ CHAT TERMINATED: Arthur Pendleton has disconnected and blocked your encrypted ID. You failed to extract the booking details.",
+  "choices": [
+    {
+      "id": "c02_2c_a_fail",
+      "text": "Back to the investigation hub",
+      "nextChapterId": "chapter_02_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "assistent"
+}

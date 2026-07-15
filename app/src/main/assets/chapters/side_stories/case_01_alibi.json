@@ -1,0 +1,14 @@
+{
+  "id": "side_01",
+  "title": "Case 1: Alibi at Midnight",
+  "content": "The elderly lady's stolen necklace...",
+  "choices": [
+    {
+      "id": "side_01_choice_1",
+      "text": "Question the maid",
+      "nextChapterId": "side_01_end"
+    }
+  ],
+  "caseType": "SIDE",
+  "chapterNumber": 1
+}

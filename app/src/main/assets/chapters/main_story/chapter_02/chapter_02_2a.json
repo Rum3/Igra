@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2a",
+  "title": "The Blackwood Restaurant",
+  "content": "You pull your trench coat tight and cross the rain-slicked streets of the Financial District.",
+  "choices": [
+    {
+      "id": "c02_2a_enter",
+      "text": "Enter the restaurant",
+      "nextChapterId": "chapter_02_2a_enter"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "resturant1"
+}

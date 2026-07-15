@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_outcome_success",
+  "title": "Ready for the Spider",
+  "content": "The clock is ticking down. You now know Vane died earlier than reported (9:30 - 10:30 PM) and had an 8:30 PM dinner appointment with a mysterious 'Mr. Sterling.' With these cards up your sleeve, you are ready to face the Spider.\n\nYour phone buzzes with a pinged location in the docks. It's time to move.",
+  "choices": [
+    {
+      "id": "c02_success_to_c03",
+      "text": "Go to the Docks (Chapter 3)",
+      "nextChapterId": "chapter_03_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "chapter_2_navigation"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2c_a_success",
+  "title": "Arthur Cooperates",
+  "content": "Arthur: 'Fine! Fine, just leave me out of the official reports! I liked Thomas. I did some off-the-books scheduling for him. What do you need?'\nYou: I found a receipt from 'The Blackwood' restaurant. Did Thomas dine there often?",
+  "choices": [
+    {
+      "id": "c02_2c_a3",
+      "text": "Continue questioning Arthur",
+      "nextChapterId": "chapter_02_2c_a_info"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "assistent"
+}

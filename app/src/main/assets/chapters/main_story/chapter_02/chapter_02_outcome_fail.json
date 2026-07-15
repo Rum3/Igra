@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_outcome_fail",
+  "title": "Unprepared for the Spider",
+  "content": "The day is over, and you’ve squandered precious hours chasing ghosts—in a restaurant with no name and no connections. You head out into the cold rain to meet the Spider, feeling vulnerable and unprepared. Will you be able to tell if they are lying to you when you don't even know the whole truth?\n\nYour phone buzzes with a pinged location in the docks. It's time to move.",
+  "choices": [
+    {
+      "id": "c02_fail_to_c03",
+      "text": "Go to the Docks (Chapter 3)",
+      "nextChapterId": "chapter_03_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "chapter_2_navigation"
+}

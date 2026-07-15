@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2b",
+  "title": "The Autopsy Report",
+  "content": "After calling in a heavy favor from a contact at the South London morgue, a encrypted PDF containing the official post-mortem examination of Thomas Vane lands in your inbox.",
+  "choices": [
+    {
+      "id": "c02_2b_read",
+      "text": "Read the full report",
+      "nextChapterId": "chapter_02_2b_full"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "altopsy"
+}

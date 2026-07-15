@@ -1,0 +1,15 @@
+{
+  "id": "chapter_02_2c_h2",
+  "title": "The Mysterious Meeting",
+  "content": "Helen: 'He was incredibly careful. He didn't say where, only that this person held the keys to the offshore accounts that would bring down one of the largest corporate shells in London.'\n\nYou don't get anything more from her. Helen closes the chat. It seems she knows more, but her fear is stronger.",
+  "choices": [
+    {
+      "id": "c02_2c_back_hub",
+      "text": "Back to the investigation hub",
+      "nextChapterId": "chapter_02_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "chapter_2"
+}

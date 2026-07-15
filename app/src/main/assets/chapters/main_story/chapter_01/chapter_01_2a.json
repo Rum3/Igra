@@ -1,0 +1,15 @@
+{
+  "id": "chapter_01_2a",
+  "title": "Crime Scene Report",
+  "content": "CASE FILE: #4683-B (Metropolitan Police). Deceased: Thomas Vane, 34... Body slumped at his desk, single gunshot wound to the right temple. A licensed .38 revolver in his right hand. Door locked from the inside with a heavy deadbolt; windows latched closed. No signs of forced entry.\nNOTED CONTACTS: Helen Vane (Widow), Arthur Pendleton (Research Assistant).\nINVESTIGATOR'S NOTE: Case closed as suicide. However, a glass of Scotch on the desk was half-full, and a fresh pack of cigarettes had been opened but none smoked.\nNotably missing: his smartphone and his encrypted laptop. The police report claims they weren't found at the scene.",
+  "choices": [
+    {
+      "id": "c01_2a_to_1",
+      "text": "Back to the desk",
+      "nextChapterId": "chapter_01_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 1,
+  "backgroundImage": "chapter_1"
+}

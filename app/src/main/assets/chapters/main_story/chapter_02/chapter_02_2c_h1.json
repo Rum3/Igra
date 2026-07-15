@@ -1,0 +1,20 @@
+{
+  "id": "chapter_02_2c_h1",
+  "title": "Helen Vane (Widow)",
+  "content": "Helen: 'I knew his paranoia wasn't just in his head. Ask your questions quickly. I'm leaving the country soon.'\n\nYou: Did Thomas seem anxious on his final night?\n\nHelen: 'He had been paranoid for months. But that last night... he was different. Calm, almost triumphant. He told me he had found the 'goldmine' and that it would all be over soon. He left our home around 8:00 PM.'",
+  "choices": [
+    {
+      "id": "c02_2c_h2a",
+      "text": "Did he say where he was going?",
+      "nextChapterId": "chapter_02_2c_h2"
+    },
+    {
+      "id": "c02_2c_h2b",
+      "text": "Did he mention who he was meeting?",
+      "nextChapterId": "chapter_02_2c_h2"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "chapter_2"
+}

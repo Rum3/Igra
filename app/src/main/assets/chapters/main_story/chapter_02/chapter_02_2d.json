@@ -1,0 +1,20 @@
+{
+  "id": "chapter_02_2d",
+  "title": "Arthur Pendleton (Assistant)",
+  "content": "You pull up Arthur's encrypted handle and send a direct message.||💬 Arthur: Look, I told the police everything I know. I'm just his research assistant. I don't want any trouble.",
+  "choices": [
+    {
+      "id": "c02_2d_choice1",
+      "text": "Arthur, think about Thomas. Help me expose the people who did this to him.",
+      "nextChapterId": "chapter_02_2c_a_success"
+    },
+    {
+      "id": "c02_2d_choice2",
+      "text": "I know about the burner phones, Arthur. Cooperate, or I'm giving your name to the police.",
+      "nextChapterId": "chapter_02_2c_a_roll"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 2,
+  "backgroundImage": "assistent"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "main_01",
+  "title": "Chapter 1: The Locked Room",
+  "content": "You receive the materials from the police. Crime scene description, Thomas's suicide note...",
+  "choices": [
+    {
+      "id": "main_01_choice_1",
+      "text": "Examine the suicide note",
+      "nextChapterId": "chapter_01_2b"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 1,
+  "backgroundImage": "chapter_1"
+}

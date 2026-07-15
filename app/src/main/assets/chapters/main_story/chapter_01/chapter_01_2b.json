@@ -1,0 +1,15 @@
+{
+  "id": "chapter_01_2b",
+  "title": "The Suicide Note",
+  "content": "A single sheet of crumpled paper, typed on Vane's old mechanical typewriter: \"I can't keep running from the ghosts anymore... don't look for answers...\"\nYou run your fingers over the paper. Vane was a tech-savvy, meticulous writer who always used digital encryption to protect his work. Why type a final farewell on a machine he despised?",
+  "choices": [
+    {
+      "id": "c01_2b_to_1",
+      "text": "Back to the desk",
+      "nextChapterId": "chapter_01_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 1,
+  "backgroundImage": "chapter_1"
+}
