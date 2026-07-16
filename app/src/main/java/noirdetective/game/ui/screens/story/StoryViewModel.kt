@@ -145,11 +145,17 @@ class StoryViewModel @Inject constructor(
 
             currentChapter = storyRepository.getChapter(targetChapterId)
             
-            // Record visit to database
+            // Record visit to database (both original and target if redirected)
             gameStateRepository.recordChapterVisit(targetChapterId)
+            if (targetChapterId != chapterId) {
+                gameStateRepository.recordChapterVisit(chapterId)
+            }
             
             if (!_visitedChapters.contains(targetChapterId)) {
                 _visitedChapters.add(targetChapterId)
+            }
+            if (targetChapterId != chapterId && !_visitedChapters.contains(chapterId)) {
+                _visitedChapters.add(chapterId)
             }
             
             // Logic for Chapter 1 initial evidence
@@ -339,8 +345,10 @@ class StoryViewModel @Inject constructor(
                 nextId = if (roll > 50) "chapter_02_2c_a_success" else "chapter_02_2c_a_blocked"
             }
 
-            // Check if we are making a move in Chapter 2 or 5 Hub
-            if ((currentChapter?.id == "chapter_02_1" || currentChapter?.id == "chapter_05_camden_hub") && actionPoints > 0) {
+            // Check if we are making a move in Chapter 2, 5 or 6 Hub
+            if ((currentChapter?.id == "chapter_02_1" || 
+                 currentChapter?.id == "chapter_05_camden_hub" || 
+                 currentChapter?.id == "chapter_06_1") && actionPoints > 0) {
                 actionPoints--
                 hubChoices.add(nextId)
             }

@@ -1,0 +1,20 @@
+{
+  "id": "chapter_07_1",
+  "title": "Chapter 7: The CEO's Office",
+  "content": "The top floor of the Atlas Foundation tower feels like a different planet. The noise of the London streets is replaced by a heavy, expensive silence. Alistair Thorne sits behind a desk carved from a single piece of dark oak, his silhouette framed by the sprawling city lights behind him.||He doesn't look like a criminal. He looks like a king. 'Detective,' he says, without looking up from his tablet. 'I'm a busy man. I hope you're here to apologize for the harassment of my staff at The Blackwood, and not to waste more of my time.'",
+  "choices": [
+    {
+      "id": "c07_1_aggressive",
+      "text": "Get aggressive: 'I'm here to talk about the blood on your hands, Thorne.'",
+      "nextChapterId": "chapter_07_aggressive_start"
+    },
+    {
+      "id": "c07_1_stealthy",
+      "text": "Keep it professional: 'I've been reviewing your audits. There are some discrepancies.'",
+      "nextChapterId": "chapter_07_stealthy_start"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 7,
+  "backgroundImage": "chapter_7"
+}
