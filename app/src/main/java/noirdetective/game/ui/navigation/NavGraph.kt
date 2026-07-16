@@ -30,7 +30,12 @@ fun NavGraph(navController: NavHostController) {
                 onOfficeClick = { navController.navigate(Screen.Files.route) },
                 onCaseClick = { navController.navigate(Screen.Story.createRoute("chapter_01_1")) },
                 onWallBoardClick = { navController.navigate(Screen.WallBoard.route) },
-                onChapter2Click = { navController.navigate(Screen.Story.createRoute("chapter_02_1")) }
+                onChapter2Click = { navController.navigate(Screen.Story.createRoute("chapter_02_1")) },
+                onChapter4Click = { navController.navigate(Screen.Story.createRoute("chapter_04_1")) },
+                onChapter5Click = { navController.navigate(Screen.Story.createRoute("chapter_05_1")) },
+                onChapter6Click = { navController.navigate(Screen.Story.createRoute("chapter_06_1")) },
+                onChapter7Click = { navController.navigate(Screen.Story.createRoute("chapter_07_1")) },
+                onDebugClick = { navController.navigate(Screen.Story.createRoute("debug_chapter_06_res")) }
             )
         }
         

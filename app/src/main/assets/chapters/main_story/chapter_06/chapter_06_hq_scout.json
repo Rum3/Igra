@@ -1,0 +1,15 @@
+{
+  "id": "chapter_06_hq_scout",
+  "title": "Monolith of Glass",
+  "content": "You spend the afternoon watching the Atlas Foundation building from a coffee shop across the street. The security is tighter than a prison—biometric scanners at every entrance and private guards with a military bearing.||You notice a recurring visitor: a black sedan with government plates. Someone powerful is protecting this place.||Without a way to bypass the digital security or a high-level keycard, getting inside will be a suicide mission. You need a better angle.||📝 WALL BOARD UPDATED: Atlas security protocols noted.",
+  "choices": [
+    {
+      "id": "c06_hq_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_06_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "chapter_6"
+}

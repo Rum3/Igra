@@ -1,0 +1,15 @@
+{
+  "id": "chapter_04_restaurant_start",
+  "title": "The Sterling Reservation",
+  "content": "You step back into 'The Blackwood'. The warmth is artificial, smelling of expensive cologne and polished silver. It's a place designed to make people feel important—or invisible.||You walk up to the maître d'. He looks at you with the same icy disdain as before, but this time you're ready.||'I'm here for what Mr. Sterling left behind from his 8:30 PM reservation,' you say, your voice flat and certain.",
+  "choices": [
+    {
+      "id": "c04_res_approach",
+      "text": "Wait for his response.",
+      "nextChapterId": "chapter_04_restaurant_inside"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 4,
+  "backgroundImage": "chapter_4_1"
+}

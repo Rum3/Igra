@@ -1,0 +1,15 @@
+{
+  "id": "chapter_04_restaurant_inside",
+  "title": "The Exchange",
+  "content": "The man's eyebrows shoot up. The name 'Sterling' acts like a magic spell. He checks a small leather-bound ledger and beckons a junior waiter.||'Ah, yes. Mr. Sterling mentioned an associate might collect his belongings. He was quite... insistent about it.'||The waiter returns with a slim, expensive leather briefcase. You feel the weight of it—heavy with paper. As you take it, you notice the maître d' glancing nervously at a table in the corner where two men in gray suits are watching you intently.",
+  "choices": [
+    {
+      "id": "c04_res_examine",
+      "text": "Examine the contents quickly.",
+      "nextChapterId": "chapter_04_restaurant_detail"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 4,
+  "backgroundImage": "chapter_4_1"
+}

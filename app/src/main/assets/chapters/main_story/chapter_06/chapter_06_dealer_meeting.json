@@ -1,0 +1,20 @@
+{
+  "id": "chapter_06_dealer_meeting",
+  "title": "Shadows at the Pier",
+  "content": "You meet the dealer at a quiet, rusted pier. He's twitchy, constantly checking the foggy water.||'Here's the deal, Detective,' he whispers. 'I have a shipment coming in—medical supplies, things the city doesn't want people like me to have. I need you to stand at the end of the pier. If the harbor patrol shows up, you flash your badge and tell them you're conducting a high-level surveillance operation. They won't ask questions.'||'Do this for me, and I'll give you everything I know about the people Vane was tracking. What do you say?'",
+  "choices": [
+    {
+      "id": "c06_dealer_accept",
+      "text": "Help him with the shipment.",
+      "nextChapterId": "chapter_06_dealer_success"
+    },
+    {
+      "id": "c06_dealer_refuse",
+      "text": "I don't cover for criminals. I'm leaving.",
+      "nextChapterId": "chapter_06_dealer_refuse"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "camdentown"
+}

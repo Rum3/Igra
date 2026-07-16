@@ -1,0 +1,30 @@
+{
+  "id": "chapter_03_puzzle_start",
+  "title": "Decryption Puzzle",
+  "content": "Back in your office, you plug the drive into your terminal. A black screen with a flashing prompt appears:||[ CRITICAL ERROR: ENCRYPTED PARTITION DETECTED ]\n[ ENTER 4-DIGIT ACCESS CODE ]||Spider's words ring in your ears: 'He always carried his most important codes with him... on his person.'||You look through the evidence from the scene. What did Vane have on him that could contain a 4-digit sequence?",
+  "choices": [
+    {
+      "id": "c03_puzzle_wrong1",
+      "text": "0830",
+      "nextChapterId": "chapter_03_puzzle_fail"
+    },
+    {
+      "id": "c03_puzzle_correct",
+      "text": "1142",
+      "nextChapterId": "chapter_03_profile_reveal"
+    },
+    {
+      "id": "c03_puzzle_wrong2",
+      "text": "2026",
+      "nextChapterId": "chapter_03_puzzle_fail"
+    },
+    {
+      "id": "c03_puzzle_wrong3",
+      "text": "9941",
+      "nextChapterId": "chapter_03_puzzle_fail"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_3"
+}

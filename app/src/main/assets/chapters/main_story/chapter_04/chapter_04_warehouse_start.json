@@ -1,0 +1,15 @@
+{
+  "id": "chapter_04_warehouse_start",
+  "title": "Warehouse 14",
+  "content": "The Industrial Zone is a skeleton of a city. Warehouse 14 looks like a massive, rusted ribcage. The only sound is the metal roof groaning in the wind.||You slide the heavy door open just enough to slip inside. The air is thick with the smell of old grease and the metallic tang of fear. It's too quiet.||You know Julian Sterling was hiding here. You need to find exactly where.",
+  "choices": [
+    {
+      "id": "c04_war_enter",
+      "text": "Enter the main hall and search for the hideout.",
+      "nextChapterId": "chapter_04_warehouse_inside"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 4,
+  "backgroundImage": "chapter_4_2"
+}

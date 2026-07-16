@@ -1,0 +1,15 @@
+{
+  "id": "chapter_03_puzzle_fail",
+  "title": "Access Denied",
+  "content": "The terminal beeps aggressively. 'ACCESS DENIED - SYSTEM LOCKDOWN IN 2 ATTEMPTS'.||You're overthinking it. Or maybe you're underthinking it. Look at the physical evidence again.",
+  "choices": [
+    {
+      "id": "c03_puzzle_retry",
+      "text": "Try again.",
+      "nextChapterId": "chapter_03_puzzle_start"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_1"
+}

@@ -32,10 +32,19 @@ fun OfficeScreen(
     onOfficeClick: () -> Unit,
     onCaseClick: () -> Unit,
     onWallBoardClick: () -> Unit,
-    onChapter2Click: () -> Unit
+    onChapter2Click: () -> Unit,
+    onChapter4Click: () -> Unit,
+    onChapter5Click: () -> Unit,
+    onChapter6Click: () -> Unit,
+    onChapter7Click: () -> Unit,
+    onDebugClick: () -> Unit
 ) {
     val hasStartedCase = viewModel.hasStartedCase
-    val canProgress = viewModel.canProgressToChapter2()
+    val canProgressToCh2 = viewModel.canProgressToChapter2()
+    val canProgressToCh4 = viewModel.canProgressToChapter4()
+    val canProgressToCh5 = viewModel.canProgressToChapter5()
+    val canProgressToCh6 = viewModel.canProgressToChapter6()
+    val canProgressToCh7 = viewModel.canProgressToChapter7()
 
     LaunchedEffect(Unit) {
         viewModel.checkProgress()
@@ -73,7 +82,7 @@ fun OfficeScreen(
             modifier = Modifier
                 .align(Alignment.TopCenter)
                 .padding(top = 60.dp)
-                .clickable { onChapter2Click() } // Click the title to jump to Chapter 2
+                .clickable { onDebugClick() } // Debug jump for testing
         )
 
         // Buttons Container
@@ -141,13 +150,15 @@ fun OfficeScreen(
             Spacer(modifier = Modifier.height(4.dp))
 
             // Main Action Button
-            val buttonText = when {
-                canProgress -> "CONTINUE TO CHAPTER 2"
-                hasStartedCase -> "CONTINUE CASE"
-                else -> "START CASE"
+            val (buttonText, buttonAction, buttonColor) = when {
+                canProgressToCh7 -> Triple("CONTINUE TO CHAPTER 7", onChapter7Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
+                canProgressToCh6 -> Triple("CONTINUE TO CHAPTER 6", onChapter6Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
+                canProgressToCh5 -> Triple("CONTINUE TO CHAPTER 5", onChapter5Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
+                canProgressToCh4 -> Triple("CONTINUE TO CHAPTER 4", onChapter4Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
+                canProgressToCh2 -> Triple("CONTINUE TO CHAPTER 2", onChapter2Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
+                hasStartedCase -> Triple("CONTINUE CASE", onCaseClick, Color.Red.copy(alpha = 0.7f))
+                else -> Triple("START CASE", onCaseClick, Color.Red.copy(alpha = 0.7f))
             }
-            
-            val buttonAction = if (canProgress) onChapter2Click else onCaseClick
 
             Button(
                 onClick = buttonAction,
@@ -156,7 +167,7 @@ fun OfficeScreen(
                     .padding(horizontal = 32.dp)
                     .height(64.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (canProgress) Color(0xFF4CAF50).copy(alpha = 0.8f) else Color.Red.copy(alpha = 0.7f),
+                    containerColor = buttonColor,
                     contentColor = Color.White
                 ),
                 shape = RoundedCornerShape(8.dp),
@@ -167,7 +178,7 @@ fun OfficeScreen(
                     style = MaterialTheme.typography.titleLarge.copy(
                         letterSpacing = 1.sp,
                         fontWeight = FontWeight.Bold,
-                        fontSize = if (canProgress) 18.sp else 22.sp
+                        fontSize = if (canProgressToCh2 || canProgressToCh4 || canProgressToCh5 || canProgressToCh6 || canProgressToCh7) 18.sp else 22.sp
                     ),
                     textAlign = TextAlign.Center,
                     maxLines = 1

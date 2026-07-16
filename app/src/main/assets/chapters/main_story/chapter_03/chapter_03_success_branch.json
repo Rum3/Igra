@@ -1,0 +1,15 @@
+{
+  "id": "chapter_03_success_branch",
+  "title": "Full Access",
+  "content": "You don't blink. 'The police discovery at 9:00 AM was a joke. Vane died between 9:30 PM and 10:30 PM the night before. And I know about the 8:30 PM meeting at The Blackwood under the alias Mr. Sterling.'||The figure in the shadows leans forward, entering the light. A young woman with sharp eyes and glasses looks at you with a hint of respect. She opens her laptop and turns it toward you.||'Sterling,' she whispers. 'You've been busy. Vane chose his successor well. Since you've proven your competence, I won't waste your time with riddles. Here is the full profile of the man Vane met that night: Julian Sterling.'",
+  "choices": [
+    {
+      "id": "c03_success_to_files",
+      "text": "Examine Julian Sterling's profile.",
+      "nextChapterId": "chapter_03_profile_reveal"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_10"
+}

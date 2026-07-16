@@ -1,0 +1,15 @@
+{
+  "id": "chapter_05_meeting_details",
+  "title": "A Purer Source",
+  "content": "'But then, things changed. He stopped coming for the small stuff. He told me he found a 'purer source' — something the Syndicate only gives to people they own. He wasn't just chasing a high anymore; he was chasing a death wish.'||'I can tell you who his new supplier was, Detective. But information like that has a price. I have a shipment arriving at the docks tomorrow... I need a set of eyes that look like law enforcement to keep the paths clear. One hand washes the other, right?'",
+  "choices": [
+    {
+      "id": "c05_meeting_finish",
+      "text": "Return to the street.",
+      "nextChapterId": "chapter_05_camden_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 5,
+  "backgroundImage": "camden_pub"
+}

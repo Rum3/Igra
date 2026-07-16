@@ -1,0 +1,15 @@
+{
+  "id": "chapter_05_meeting_start",
+  "title": "The Dealer's Den",
+  "content": "The address leads you to a decaying brick building. Inside, you find the door cracked open. The room smells of stale smoke and burnt chemical residue.||The man is sitting in a threadbare armchair. 'Vane was a ghost long before he died,' he says. 'In the beginning, he came to me for simple things. Pills to stay awake, to keep the words flowing. He was just another high-functioning addict trying to outrun a deadline.'",
+  "choices": [
+    {
+      "id": "c05_meeting_continue",
+      "text": "Ask about his recent changes.",
+      "nextChapterId": "chapter_05_meeting_details"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 5,
+  "backgroundImage": "camden_pub"
+}

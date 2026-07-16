@@ -156,7 +156,7 @@ fun StoryScreen(
                                             textAlign = TextAlign.Justify
                                         )
 
-                                        if (chapter.id == "chapter_02_1") {
+                                        if (chapter.id == "chapter_02_1" || chapter.id == "chapter_05_camden_hub") {
                                             Spacer(modifier = Modifier.height(16.dp))
                                             Surface(
                                                 color = Color.Red.copy(alpha = 0.2f),
@@ -207,11 +207,16 @@ fun StoryScreen(
                                 modifier = Modifier.fillMaxWidth(),
                                 verticalArrangement = Arrangement.spacedBy(12.dp)
                             ) {
-                                // Logic for Chapter 1: Show "RETURN TO DESK" button when all 4 clues are viewed
+                                // Logic for Chapter transitions
                                 val initialEvidence = listOf("chapter_01_2a", "chapter_01_2b", "chapter_01_2c", "chapter_01_2g")
                                 val viewedCount = visitedChapters.count { it in initialEvidence }
                                 
-                                if (chapter.id == "chapter_01_1" && viewedCount == 4) {
+                                val isEndOfChapter1 = chapter.id == "chapter_01_1" && viewedCount == 4
+                                val isEndOfChapter3 = chapter.id == "chapter_03_final_files"
+                                val isEndOfChapter4 = chapter.id == "chapter_04_restaurant_detail" || chapter.id == "chapter_04_warehouse_discovery"
+                                val isEndOfChapter5 = chapter.id == "chapter_05_end" || chapter.id == "chapter_05_ignore_path" || chapter.id == "chapter_05_drugs_path"
+
+                                if (isEndOfChapter1 || isEndOfChapter3 || isEndOfChapter4 || isEndOfChapter5) {
                                     Button(
                                         onClick = onOfficeClick,
                                         modifier = Modifier.fillMaxWidth().height(60.dp),

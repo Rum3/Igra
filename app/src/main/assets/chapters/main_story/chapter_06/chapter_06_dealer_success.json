@@ -1,0 +1,15 @@
+{
+  "id": "chapter_06_dealer_success",
+  "title": "A Dangerous Alliance",
+  "content": "You stand in the cold fog, the silhouette of authority. When a patrol boat slows down, a single glance at your badge and a firm 'surveillance in progress' is all it takes for them to move on.||The dealer's shipment is unloaded in minutes. He hand you a crumpled, greasy piece of paper.||'You're a man of your word, Detective. Vane was tracking 'The Cleaners'. They're a professional hit squad used by Atlas Foundation to silence leaks. They meet in a basement club in Camden called 'The Void'. Look for the blue light behind the fish market.'||📝 FILES UPDATED: 'The Cleaners' dossier added.",
+  "choices": [
+    {
+      "id": "c06_dealer_success_back",
+      "text": "Return to the street.",
+      "nextChapterId": "chapter_06_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "camdentown"
+}

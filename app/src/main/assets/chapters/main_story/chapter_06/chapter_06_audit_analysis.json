@@ -1,0 +1,15 @@
+{
+  "id": "chapter_06_audit_analysis",
+  "title": "The Paper Trail",
+  "content": "You spend hours in your office, the glow of the desk lamp reflecting off the complex spreadsheets of the Atlas Foundation.||By cross-referencing the audit from the restaurant with the chat logs from the drive, a pattern emerges. It’s not just investment; it’s a 'Circular Debt' scheme.||Atlas uses high-interest loans to shell companies that exist only on paper. These companies then buy 'services' from the Syndicate, effectively laundering millions every month. Vane had found the primary account numbers.||📝 FILES UPDATED: Complex Financial Schemes discovered.",
+  "choices": [
+    {
+      "id": "c06_audit_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_06_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "office"
+}

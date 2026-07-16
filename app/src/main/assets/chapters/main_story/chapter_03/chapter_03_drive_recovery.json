@@ -1,0 +1,15 @@
+{
+  "id": "chapter_03_drive_recovery",
+  "title": "Decryption Attempt",
+  "content": "Back in your office, the rain hammering against the glass feels louder than before. You plug the drive into your laptop. A prompt appears: 'ENCRYPTION KEY REQUIRED'.||Spider mentioned that Vane was meticulous. You search through the physical notes you took from his desk earlier. There must be a pattern, a keyword, something he would use to hide the truth in plain sight.||You notice a small mark on the back of the Financial District receipt: '11:42 - S'. 11:42 was the time on his broken watch. 'S'... Sterling?||You type the combination: 'STERLING1142'. The progress bar slowly fills. 20%... 60%... 100%.||Access granted. The drive opens to reveal a single hidden partition labeled: 'THE SPIDER\\'S MESH - FINAL DRAFT'.",
+  "choices": [
+    {
+      "id": "c03_open_files",
+      "text": "Examine the recovered files.",
+      "nextChapterId": "chapter_03_final_files"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_1"
+}

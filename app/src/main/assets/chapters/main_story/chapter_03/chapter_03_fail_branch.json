@@ -1,0 +1,15 @@
+{
+  "id": "chapter_03_fail_branch",
+  "title": "A Cold Reception",
+  "content": "You decide to stay silent or provide only vague details. The figure scoffs in the darkness. 'Cagey, aren't we? Or maybe you just don't have anything to tell me.'||'Vane was a professional. He deserved better than someone chasing shadows without a clue. I'm not going to do the work for you.'||'Take this drive. I won't help you open it, but I'll give you a hint: Thomas was meticulous. He always carried his most important codes with him, hidden in plain sight on his person. If you can't figure it out, you're in the wrong profession.'",
+  "choices": [
+    {
+      "id": "c03_fail_to_puzzle",
+      "text": "Take the drive and return to your office.",
+      "nextChapterId": "chapter_03_puzzle_start"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_3"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "chapter_03_profile_reveal",
+  "title": "Julian Sterling's Dossier",
+  "content": "The screen flickers to life, displaying a high-resolution file on the laptop.||NAME: Julian Sterling\nAGE: 46\nPOSITION: Senior Analyst at Atlas Foundation.\nRELATION TO VICTIM: Former mentor. Known to have leaked internal documents to Vane regarding the 'Syndicate' laundering schemes.||The file contains a frantic final message from Sterling to Vane: 'They found the leak. If you're reading this, I'm already gone. Don't go to the office. Meet me at Warehouse 14, Pier 9 — the industrial zone hideout.'||It's clear now. Sterling wasn't just a source; he was a target.||📝 FILES UPDATED: Julian Sterling's profile and hideout address added.",
+  "choices": [
+    {
+      "id": "c03_to_final",
+      "text": "Examine the remaining drive fragments.",
+      "nextChapterId": "chapter_03_final_files"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_10"
+}

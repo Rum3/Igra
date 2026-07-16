@@ -1,10 +1,10 @@
 {
   "id": "chapter_03_1",
-  "title": "Chapter 3: Dark Waters",
+  "title": "Chapter 3: The Last Report",
   "content": "The fog over the Thames is so thick you can almost taste the salt and industrial waste. You stand outside Warehouse 14, the collar of your coat turned up against the biting wind. Your phone vibrates once — a final confirmation.||Inside, the air is stagnant, filled with the ghosts of a thousand shipments. A single light hangs from the ceiling, swaying gently. In the shadows, you see the silhouette of someone sitting on a crate, their face hidden by a low-brimmed hat.||'You're late, Detective,' a raspy voice cuts through the silence. 'Or perhaps you were just being careful. In this city, caution is the only thing that keeps you breathing.'",
   "choices": [
     {
-      "id": "c03_1_choice1",
+      "id": "c03_1_identify",
       "text": "Identify yourself and ask for the drive.",
       "nextChapterId": "chapter_03_2"
     }

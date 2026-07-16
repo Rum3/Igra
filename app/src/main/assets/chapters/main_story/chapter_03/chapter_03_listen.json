@@ -1,0 +1,15 @@
+{
+  "id": "chapter_03_listen",
+  "title": "Shadow Games",
+  "content": "You remain silent, watching the silhouette. 'You're the one who called me here,' you say flatly. 'If you have something to say, say it.'||The figure laughs softly. 'Patience. A rare quality in this city. Vane didn't have much of it. He was always in a rush to save the world.'||'He called me 'Spider' because I sit in the center of the web. I see the threads before they break. Vane was about to cut a very expensive thread.'||'Take this drive. It's his legacy. And his death warrant. Be careful how you handle it.'",
+  "choices": [
+    {
+      "id": "c03_listen_take_drive",
+      "text": "Accept the drive.",
+      "nextChapterId": "chapter_03_drive_recovery"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_3"
+}

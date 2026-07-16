@@ -1,0 +1,15 @@
+{
+  "id": "chapter_05_1",
+  "title": "Chapter 5: Alternate Reality",
+  "content": "The morning rush hour in the London Underground is a sea of gray faces and tired eyes. As you lean against the sliding doors, a man in a worn-out denim jacket bumps into you.||Instead of apologizing, he whispers, 'I knew Vane. I have something you need to see, Detective. Meet me at Camden Town tonight, 9 PM. Alleyway behind the lock. Don't be late.'||Before you can grab his arm, he disappears into the crowd at the next stop. Vane had many sources, but this one felt different—dirtier.",
+  "choices": [
+    {
+      "id": "c05_1_go_camden",
+      "text": "Go to Camden Town tonight.",
+      "nextChapterId": "chapter_05_camden_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 5,
+  "backgroundImage": "metro"
+}

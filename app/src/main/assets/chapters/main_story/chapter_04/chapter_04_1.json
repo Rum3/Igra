@@ -1,0 +1,20 @@
+{
+  "id": "chapter_04_1",
+  "title": "Chapter 4: The First Lead",
+  "content": "The morning air is cold and crisp. You stand at a crossroads in your investigation. Thomas Vane's last hours were spent between two polar opposites of London.||You know the Syndicate is moving fast to clean up his trail. The police are also closing in to seal the crime scenes.||⚠️ DETECTIVE MECHANIC: SINGLE CHOICE\nYou have time to investigate ONLY ONE of these locations. Once you make your choice, the other lead will be lost forever.||One lead takes you back to the polished marble of the Financial District. The other leads to the rusted, decaying silence of the Industrial Zone.||Where will you start your search?",
+  "choices": [
+    {
+      "id": "c04_1_restaurant",
+      "text": "Investigate 'The Blackwood' Restaurant",
+      "nextChapterId": "chapter_04_restaurant_start"
+    },
+    {
+      "id": "c04_1_warehouse",
+      "text": "Search Warehouse 14, Pier 9",
+      "nextChapterId": "chapter_04_warehouse_start"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 4,
+  "backgroundImage": "chapter_2_navigation"
+}

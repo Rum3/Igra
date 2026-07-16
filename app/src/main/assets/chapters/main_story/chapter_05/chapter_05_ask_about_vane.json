@@ -1,0 +1,15 @@
+{
+  "id": "chapter_05_ask_about_vane",
+  "title": "Vane's Tracks",
+  "content": "You move deeper into the market, away from the neon lights, to a corner where the 'street pharmacists' operate in the heavy shadows of the brick arches. A young man with a hollow stare and a designer jacket that doesn't belong to him recognizes Vane's photo immediately.||'The writer? Yeah, he was here. A regular fixture for a while. Usually late, always looking over his shoulder like the sky was about to fall on him,' he says, lighting a cigarette with trembling hands. 'He wasn't just here for a simple high. He was chasing something much darker. He started hanging around the Syndicate's local runners.'||'Take my advice, Detective. Vane got himself tangled up with people who don't like being written about. They don't just bury secrets, they bury the people who find them. You're asking too many questions in a place where questions get you fitted for a concrete suit. Drop it and walk away while you still have legs to do it with.'",
+  "choices": [
+    {
+      "id": "c01_ask_vane_back",
+      "text": "Return to the street.",
+      "nextChapterId": "chapter_05_camden_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 5,
+  "backgroundImage": "camdentown"
+}

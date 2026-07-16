@@ -1,0 +1,20 @@
+{
+  "id": "chapter_06_1",
+  "title": "Chapter 6: The Atlas Labyrinth",
+  "content": "The ringing in your ears from the Camden clubs has finally faded. You've slept through the entire day, the heavy curtains of your office keeping the world at bay. Now, the sun has set, and a cold evening fog is rolling in from the Thames.||Refreshed but on edge, you look at the evidence spread across your desk. The clock is ticking toward your confrontation with Atlas Foundation. You have enough energy for exactly two major moves tonight.||How will you use this darkness to your advantage?",
+  "choices": [
+    {
+      "id": "c06_1_dynamic_study",
+      "text": "🔍 Study the evidence recovered yesterday.",
+      "nextChapterId": "chapter_06_study_logic"
+    },
+    {
+      "id": "c06_1_dealer",
+      "text": "🤝 Meet the Dealer at the Docks.",
+      "nextChapterId": "chapter_06_dealer_meeting"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "chapter_6"
+}

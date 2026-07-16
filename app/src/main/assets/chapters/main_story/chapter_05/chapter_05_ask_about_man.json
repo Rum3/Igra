@@ -1,0 +1,15 @@
+{
+  "id": "chapter_05_ask_about_man",
+  "title": "The Street Peddler",
+  "content": "You slide a few folded bills across a sticky bar counter in a crowded Camden dive. The bartender, a man with a map of broken veins on his nose, glances at the photo you've sketched out.||'That one?' he sneers, wiping a glass with a rag that's seen better days. 'He's a bottom-feeder. A small-time street peddler who'd sell his own mother's secrets for a single fix. He's been haunting these alleys for years, pretending he's part of the big game.'||'Sure, he knows every shadow in Camden, and he's got eyes on every back door, but he's a fraud. If he's telling you he's got 'insider info' on a guy like Vane, he's likely just looking for a patsy to clear his own debts.'",
+  "choices": [
+    {
+      "id": "c05_ask_man_back",
+      "text": "Return to the street.",
+      "nextChapterId": "chapter_05_camden_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 5,
+  "backgroundImage": "camden_market"
+}

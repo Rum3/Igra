@@ -1,0 +1,15 @@
+{
+  "id": "chapter_06_dealer_favor",
+  "title": "A Debt Repaid",
+  "content": "You meet the dealer from Camden at a quiet pier near the docks. He's nervous, clutching a battered sports bag. You keep watch while a small, unmarked boat slips through the fog to drop off a crate.||Your presence—looking every bit like an off-duty inspector—is enough to keep the local harbor patrol at a distance. The exchange is fast and silent.||'You're a man of your word, Detective,' he says, exhaling a cloud of smoke. 'Vane wasn't just buying pills. He was tracking the Syndicate's muscle—a group called 'The Cleaners'. They operate out of Camden but get their paychecks from Atlas Foundation shell companies.'||'They're the ones who made sure Vane's office was locked from the inside. If you want to find them, look for the 'Atlas Logistics' vans near the market at 3 AM.'||📝 FILES UPDATED: 'The Cleaners' identified.",
+  "choices": [
+    {
+      "id": "c06_dealer_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_06_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "camdentown"
+}

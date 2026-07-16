@@ -1,0 +1,15 @@
+{
+  "id": "chapter_04_warehouse_inside",
+  "title": "The Trashed Hideout",
+  "content": "You find Sterling's spot behind a wall of empty shipping crates. It's been hit—hard. An unmade cot is overturned, and a half-full cup of coffee is now cold and covered in a film of dust.||Someone was here recently. The Syndicate didn't just search the place; they tore it apart. But Sterling was a senior analyst—he knew how to hide things from people who only know how to break things.||You start looking for a professional's hiding spot.",
+  "choices": [
+    {
+      "id": "c04_war_search",
+      "text": "Check the structural beams.",
+      "nextChapterId": "chapter_04_warehouse_discovery"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 4,
+  "backgroundImage": "chapter_4_2"
+}

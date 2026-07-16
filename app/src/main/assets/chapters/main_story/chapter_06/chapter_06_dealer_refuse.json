@@ -1,0 +1,15 @@
+{
+  "id": "chapter_06_dealer_refuse",
+  "title": "Bridges Burned",
+  "content": "You turn your back on him. 'I'm a detective, not your lookout. Find someone else to play your games.'||The dealer's face hardens. 'Big mistake, hero. Vane thought he was too good for this world too, and look what happened to him.'||'Keep digging if you want, but remember this: the people Vane was looking for don't wait for you to find them. They'll find you first. Stay out of the shadows, Detective. They're already filled.'",
+  "choices": [
+    {
+      "id": "c06_dealer_refuse_back",
+      "text": "Leave the docks.",
+      "nextChapterId": "chapter_06_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "camdentown"
+}

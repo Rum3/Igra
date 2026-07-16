@@ -1,0 +1,15 @@
+{
+  "id": "chapter_06_map_analysis",
+  "title": "Mapping the Flow",
+  "content": "You spread the Syndicate Logistics Map across your desk. By marking the drop-off points, you see a clear pattern: all the cash flows toward Atlas Foundation shell companies.||It's not just random crime; it's a massive, synchronized money-laundering machine. You've found the physical proof of where the money goes after it leaves the streets.||📝 FILES UPDATED: Syndicate Money Trail confirmed.",
+  "choices": [
+    {
+      "id": "c06_map_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_06_1"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 6,
+  "backgroundImage": "wall_board"
+}

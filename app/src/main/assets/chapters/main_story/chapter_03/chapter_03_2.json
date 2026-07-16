@@ -1,0 +1,20 @@
+{
+  "id": "chapter_03_2",
+  "title": "Meeting the Source",
+  "content": "You step into the weak circle of light. 'Vane's widow sent me,' you say, keeping your hand near your pocket. 'I'm looking for the truth about what he was working on. You said you have the drive.'||The figure shifts, the crate creaking under their weight. 'The truth is a dangerous thing to carry in your pocket, Detective. Vane learned that the hard way.'||'I need to know if you're worth the risk. Tell me, what have you found so far? Was it really a suicide, or did someone help him into the grave?'",
+  "choices": [
+    {
+      "id": "c03_2_leverage",
+      "text": "Prove your competence with the facts you've gathered.",
+      "nextChapterId": "chapter_03_check_outcome"
+    },
+    {
+      "id": "c03_2_listen",
+      "text": "Keep your cards close. Let her speak first.",
+      "nextChapterId": "chapter_03_fail_branch"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 3,
+  "backgroundImage": "chapter_3"
+}
