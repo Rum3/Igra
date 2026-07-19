@@ -1,0 +1,15 @@
+{
+  "id": "chapter_08_camden_cleaners",
+  "title": "A Dirty Meeting",
+  "content": "You track Miller's unmarked car to a basement casino in Camden. Staying in the shadows, you watch him meet a man in a gray, oil-stained utility jacket.||Because of the description the Dealer gave you at the docks, you recognize the man immediately. He's one of 'The Cleaners'.||Miller looks terrified, handing over a small package. He's not just taking bribes from the elite; he's paying off debts to the street muscle. They own him.||📝 FILES UPDATED: Miller's link to The Cleaners confirmed.",
+  "choices": [
+    {
+      "id": "c08_cleaners_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_08_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "camdentown"
+}

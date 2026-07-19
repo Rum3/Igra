@@ -1,0 +1,15 @@
+{
+  "id": "chapter_07_final_warning",
+  "title": "The Exit",
+  "content": "As you head for the door, Thorne speaks one last time, his voice dropping an octave. 'I know where you work, Detective. I know you like your scotch neat and your office cold. It's a charmingly archaic life you lead.'||'Be careful. London is a dangerous place for those who walk alone. I'd hate to see such a dedicated professional become just another statistic in the city's files.'",
+  "choices": [
+    {
+      "id": "c07_exit_building",
+      "text": "Exit the Atlas Tower.",
+      "nextChapterId": "chapter_07_end"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 7,
+  "backgroundImage": "chapter_7"
+}

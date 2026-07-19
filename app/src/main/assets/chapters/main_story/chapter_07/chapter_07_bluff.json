@@ -1,0 +1,15 @@
+{
+  "id": "chapter_07_bluff",
+  "title": "Playing with Fire",
+  "content": "You lean against the mahogany desk. 'Vane is dead, but his investigation is very much alive. I'm just here to see if you're a man who prefers to resolve discrepancies quietly.'||Thorne sets his tea cup down with precise, deliberate care. He finally looks you in the eye—they are like two chips of gray ice. 'I've met many men who thought they could leverage a tragedy for personal gain. They usually find that the weight of what they're holding is much heavier than they anticipated.'",
+  "choices": [
+    {
+      "id": "c07_bluff_cleaners",
+      "text": "Press him: 'Is that what happened to Vane? Did \"The Cleaners\" find him too heavy to handle?'",
+      "nextChapterId": "chapter_07_cleaners"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 7,
+  "backgroundImage": "chapter_7"
+}

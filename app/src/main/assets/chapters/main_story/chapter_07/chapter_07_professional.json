@@ -1,0 +1,15 @@
+{
+  "id": "chapter_07_professional",
+  "title": "A Rational Inquiry",
+  "content": "You take a seat without being invited. 'Sterling was a senior analyst. He understood logistics. I'm trying to understand why a man of your stature is so interested in the mechanics of the London underworld.'||Thorne turns slowly, a thin smile playing on his lips. 'Mr. Sterling was a man of patterns. But patterns can be misinterpreted by those who don't see the whole board. Vane was a victim of his own vivid imagination. He saw monsters where there are only business interests.'",
+  "choices": [
+    {
+      "id": "c07_prof_cleaners",
+      "text": "'And \"The Cleaners\"? Are they part of your business interests?'",
+      "nextChapterId": "chapter_07_cleaners"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 7,
+  "backgroundImage": "chapter_7"
+}

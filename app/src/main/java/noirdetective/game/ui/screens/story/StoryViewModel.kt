@@ -70,6 +70,14 @@ class StoryViewModel @Inject constructor(
                 hubChoices.clear()
             }
 
+            // Reset Action Points for Chapter 8 Hub
+            val isReturningFromCh8Sub = currentChapter?.id?.startsWith("chapter_08_") == true && 
+                                       currentChapter?.id != "chapter_08_hub"
+            if ((chapterId == "chapter_08_hub" || chapterId == "debug_chapter_08") && !isReturningFromCh8Sub) {
+                actionPoints = 2
+                hubChoices.clear()
+            }
+
             // Logic for Chapter 2 redirection
             var targetChapterId = chapterId
 
@@ -102,6 +110,35 @@ class StoryViewModel @Inject constructor(
                 gameStateRepository.recordChapterVisit("chapter_03_final_files")
                 gameStateRepository.recordChapterVisit("chapter_05_end")
                 _visitedChapters.addAll(listOf("chapter_04_restaurant_detail", "chapter_03_final_files", "chapter_05_end"))
+            }
+
+            if (chapterId == "debug_chapter_07") {
+                targetChapterId = "chapter_07_1"
+                // Simulate all previous steps needed to get to Ch 7
+                gameStateRepository.recordChapterVisit("chapter_01_1")
+                gameStateRepository.recordChapterVisit("chapter_02_outcome_success")
+                gameStateRepository.recordChapterVisit("chapter_03_final_files")
+                gameStateRepository.recordChapterVisit("chapter_04_restaurant_detail")
+                gameStateRepository.recordChapterVisit("chapter_05_end")
+                gameStateRepository.recordChapterVisit("chapter_06_end")
+                _visitedChapters.addAll(listOf("chapter_02_outcome_success", "chapter_03_final_files", "chapter_04_restaurant_detail", "chapter_05_end"))
+            }
+
+            if (chapterId == "debug_chapter_08") {
+                targetChapterId = "chapter_08_1"
+                // Success path for Ch 6 to recognize Cleaners
+                gameStateRepository.recordChapterVisit("chapter_06_dealer_success")
+                _visitedChapters.add("chapter_06_dealer_success")
+                // Full history for progress
+                gameStateRepository.recordChapterVisit("chapter_07_end")
+                _visitedChapters.add("chapter_07_end")
+            }
+
+            // Logic for Chapter 8 redirect
+            if (chapterId == "chapter_08_camden_check") {
+                val knowsCleaners = gameStateRepository.hasVisited("chapter_06_dealer_success") || 
+                                   _visitedChapters.contains("chapter_06_dealer_success")
+                targetChapterId = if (knowsCleaners) "chapter_08_camden_cleaners" else "chapter_08_camden_mystery"
             }
 
             if (chapterId == "chapter_03_check_outcome") {
@@ -190,6 +227,11 @@ class StoryViewModel @Inject constructor(
                 addChapter6Evidence("the_cleaners")
             } else if (targetChapterId == "chapter_06_audit_analysis" || targetChapterId == "chapter_06_map_analysis") {
                 addChapter6Evidence("financial_schemes")
+            }
+
+            // Logic for Chapter 7 evidence collection
+            if (targetChapterId == "chapter_07_end") {
+                addChapter7Evidence()
             }
             
             isLoading = false
@@ -330,6 +372,17 @@ class StoryViewModel @Inject constructor(
         }
     }
 
+    private suspend fun addChapter7Evidence() {
+        evidenceRepository.updateEvidence(EvidenceItem(
+            id = "surveillance_alert",
+            name = "Surveillance Photo",
+            shortDescription = "A photo of your office taken from the street.",
+            fullDescription = "Received via an unknown number after meeting Alistair Thorne. It confirms that the Atlas Foundation (or the Syndicate) is actively monitoring your movements.",
+            isCollected = true,
+            isPinned = true
+        ))
+    }
+
     fun makeChoice(choice: Choice) {
         viewModelScope.launch {
             var nextId = choice.nextChapterId
@@ -340,10 +393,11 @@ class StoryViewModel @Inject constructor(
                 nextId = if (roll > 50) "chapter_02_2c_a_success" else "chapter_02_2c_a_blocked"
             }
 
-            // Check if we are making a move in Chapter 2, 5 or 6 Hub
+            // Check if we are making a move in Chapter 2, 5, 6 or 8 Hub
             if ((currentChapter?.id == "chapter_02_1" ||
                  currentChapter?.id == "chapter_05_camden_hub" ||
-                 currentChapter?.id == "chapter_06_1") && actionPoints > 0) {
+                 currentChapter?.id == "chapter_06_1" ||
+                 currentChapter?.id == "chapter_08_hub") && actionPoints > 0) {
                 actionPoints--
                 hubChoices.add(nextId)
             }

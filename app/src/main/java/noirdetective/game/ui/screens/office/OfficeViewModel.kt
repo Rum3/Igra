@@ -27,6 +27,8 @@ class OfficeViewModel @Inject constructor(
     var chapter4Completed by mutableStateOf(false)
     var chapter5Completed by mutableStateOf(false)
     var chapter6Completed by mutableStateOf(false)
+    var chapter7Completed by mutableStateOf(false)
+    var chapter8Completed by mutableStateOf(false)
 
     init {
         checkProgress()
@@ -54,7 +56,18 @@ class OfficeViewModel @Inject constructor(
             chapter5Completed = gameStateRepository.hasVisitedAll(listOf("chapter_05_end"))
 
             // Check if Chapter 6 is completed
-            chapter6Completed = gameStateRepository.hasVisitedAll(listOf("chapter_06_end"))
+            chapter6Completed = gameStateRepository.hasVisited("chapter_06_audit_analysis") || 
+                               gameStateRepository.hasVisited("chapter_06_map_analysis") ||
+                               gameStateRepository.hasVisited("chapter_06_dealer_success") ||
+                               gameStateRepository.hasVisited("chapter_06_dealer_refuse")
+
+            // Check if Chapter 7 is completed
+            chapter7Completed = gameStateRepository.hasVisitedAll(listOf("chapter_07_end"))
+
+            // Check if Chapter 8 is completed (at least one sub-investigation done)
+            chapter8Completed = gameStateRepository.hasVisited("chapter_08_audit") ||
+                               gameStateRepository.hasVisited("chapter_08_camden_check") ||
+                               gameStateRepository.hasVisited("chapter_08_dictaphone")
         }
     }
 
@@ -75,6 +88,14 @@ class OfficeViewModel @Inject constructor(
     }
 
     fun canProgressToChapter7(): Boolean {
-        return chapter6Completed
+        return chapter6Completed && !chapter7Completed
+    }
+
+    fun canProgressToChapter8(): Boolean {
+        return chapter7Completed && !chapter8Completed
+    }
+
+    fun canProgressToChapter9(): Boolean {
+        return chapter8Completed
     }
 }

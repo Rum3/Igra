@@ -1,0 +1,15 @@
+{
+  "id": "chapter_08_audit",
+  "title": "The Atlas Connection",
+  "content": "You spend hours cross-referencing Miller's bank deposits with the Atlas internal audit Sterling left you. The pieces fit with terrifying precision.||A payment of £50,000 was made to a shell company owned by Miller's brother-in-law. The source? A subsidiary of the Atlas Foundation.||Miller didn't just close the case because of laziness. He was paid to look the other way while Atlas cleaned up the digital trail.||📝 FILES UPDATED: Miller's bribery record logged.",
+  "choices": [
+    {
+      "id": "c08_audit_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_08_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "chapter_1"
+}

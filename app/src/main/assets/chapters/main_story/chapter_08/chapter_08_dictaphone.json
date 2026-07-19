@@ -1,0 +1,15 @@
+{
+  "id": "chapter_08_dictaphone",
+  "title": "The Missing Tape",
+  "content": "You use an old contact to pull the first-responder's inventory from the night of Vane's death. It's handwritten and messy, but one item stands out.||Item 14: Voice recorder (Dictaphone). Found on desk.||In the final report signed by Miller, Item 14 is gone. Scrubbed from the record. Vane was a writer who recorded every interview. If that tape exists, it's the one thing that can't be explained away as a suicide.||📝 FILES UPDATED: Missing dictaphone noted.",
+  "choices": [
+    {
+      "id": "c08_dict_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_08_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "chapter_1"
+}

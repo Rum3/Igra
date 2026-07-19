@@ -37,6 +37,8 @@ fun OfficeScreen(
     onChapter5Click: () -> Unit,
     onChapter6Click: () -> Unit,
     onChapter7Click: () -> Unit,
+    onChapter8Click: () -> Unit,
+    onChapter9Click: () -> Unit,
     onDebugClick: () -> Unit
 ) {
     val hasStartedCase = viewModel.hasStartedCase
@@ -45,6 +47,8 @@ fun OfficeScreen(
     val canProgressToCh5 = viewModel.canProgressToChapter5()
     val canProgressToCh6 = viewModel.canProgressToChapter6()
     val canProgressToCh7 = viewModel.canProgressToChapter7()
+    val canProgressToCh8 = viewModel.canProgressToChapter8()
+    val canProgressToCh9 = viewModel.canProgressToChapter9()
 
     LaunchedEffect(Unit) {
         viewModel.checkProgress()
@@ -151,6 +155,8 @@ fun OfficeScreen(
 
             // Main Action Button
             val (buttonText, buttonAction, buttonColor) = when {
+                canProgressToCh9 -> Triple("CONTINUE TO CHAPTER 9", onChapter9Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
+                canProgressToCh8 -> Triple("CONTINUE TO CHAPTER 8", onChapter8Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
                 canProgressToCh7 -> Triple("CONTINUE TO CHAPTER 7", onChapter7Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
                 canProgressToCh6 -> Triple("CONTINUE TO CHAPTER 6", onChapter6Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
                 canProgressToCh5 -> Triple("CONTINUE TO CHAPTER 5", onChapter5Click, Color(0xFF4CAF50).copy(alpha = 0.8f))
@@ -178,7 +184,7 @@ fun OfficeScreen(
                     style = MaterialTheme.typography.titleLarge.copy(
                         letterSpacing = 1.sp,
                         fontWeight = FontWeight.Bold,
-                        fontSize = if (canProgressToCh2 || canProgressToCh4 || canProgressToCh5 || canProgressToCh6 || canProgressToCh7) 18.sp else 22.sp
+                        fontSize = if (canProgressToCh2 || canProgressToCh4 || canProgressToCh5 || canProgressToCh6 || canProgressToCh7 || canProgressToCh8 || canProgressToCh9) 18.sp else 22.sp
                     ),
                     textAlign = TextAlign.Center,
                     maxLines = 1

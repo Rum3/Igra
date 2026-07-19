@@ -1,0 +1,15 @@
+{
+  "id": "chapter_08_2",
+  "title": "The Delivery",
+  "content": "On the floor, just inside the door, lies a plain brown envelope. No return address. No stamps.||Someone was here while you were meeting Thorne. Someone who knew exactly how to slip past your locks without leaving a trace.",
+  "choices": [
+    {
+      "id": "c08_2_open",
+      "text": "Open the envelope.",
+      "nextChapterId": "chapter_08_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "miller_envelope"
+}

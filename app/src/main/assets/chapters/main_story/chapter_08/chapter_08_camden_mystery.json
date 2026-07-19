@@ -1,0 +1,15 @@
+{
+  "id": "chapter_08_camden_mystery",
+  "title": "A Dirty Meeting",
+  "content": "You track Miller's unmarked car to a basement casino in Camden. Staying in the shadows, you watch him meet a broad-shouldered man in a utility jacket.||The exchange is quick and tense. Miller looks like a man who hasn't slept in weeks. He hands over a small package and leaves without a word.||You don't recognize the man, but his professional, clinical manner is chilling. Miller is clearly in deep with someone dangerous on these streets.||📝 FILES UPDATED: Miller's street meeting logged.",
+  "choices": [
+    {
+      "id": "c08_mystery_back",
+      "text": "Return to the investigation.",
+      "nextChapterId": "chapter_08_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "camdentown"
+}

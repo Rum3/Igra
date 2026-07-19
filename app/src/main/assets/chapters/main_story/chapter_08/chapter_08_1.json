@@ -1,0 +1,15 @@
+{
+  "id": "chapter_08_1",
+  "title": "A Cold Homecoming",
+  "content": "You return to your office as the cold afternoon light fades into a bruised purple evening. The surveillance photo you received earlier makes every shadow in the room feel like a threat.||Even with the lights on, the air feels heavy. You can't shake the feeling that Thorne's reach extends far beyond the glass walls of his tower.",
+  "choices": [
+    {
+      "id": "c08_1_next",
+      "text": "Look around the room.",
+      "nextChapterId": "chapter_08_2"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "miller_envelope"
+}

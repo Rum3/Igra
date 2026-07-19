@@ -1,0 +1,25 @@
+{
+  "id": "chapter_08_hub",
+  "title": "The Shadow in the Force",
+  "content": "Inside, you find bank statements and property records belonging to Inspector Miller — the lead officer who ruled Vane's death a suicide.||It's time to find out why he was in such a hurry to close the case.||⚠️ ACTIONS: 2",
+  "choices": [
+    {
+      "id": "c08_h_audit",
+      "text": "🔍 Track the source of Miller's payments.",
+      "nextChapterId": "chapter_08_audit"
+    },
+    {
+      "id": "c08_h_camden",
+      "text": "🕵️ Follow Miller to a meeting in Camden.",
+      "nextChapterId": "chapter_08_camden_check"
+    },
+    {
+      "id": "c08_h_evidence",
+      "text": "📁 Check the original crime scene inventory.",
+      "nextChapterId": "chapter_08_dictaphone"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 8,
+  "backgroundImage": "chapter_8_office"
+}

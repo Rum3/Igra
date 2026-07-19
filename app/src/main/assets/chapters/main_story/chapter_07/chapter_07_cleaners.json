@@ -1,0 +1,15 @@
+{
+  "id": "chapter_07_cleaners",
+  "title": "A Heavy Silence",
+  "content": "For a moment, the heavy silence in the room is absolute. The distant hum of the city seems to fade away. Thorne doesn't blink, but the muscles in his jaw tighten almost imperceptibly.||'You hear interesting rumors on the street, Detective. But rumors do not stand up in court, and they certainly don't protect you in dark alleys.'||He walks toward his desk and presses a button. 'This meeting is over. You've wasted enough of my time with children's stories.'",
+  "choices": [
+    {
+      "id": "c07_cleaners_leave",
+      "text": "Stand up and prepare to leave.",
+      "nextChapterId": "chapter_07_final_warning"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 7,
+  "backgroundImage": "chapter_7"
+}
