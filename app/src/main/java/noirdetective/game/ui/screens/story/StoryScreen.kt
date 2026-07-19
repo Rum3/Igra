@@ -196,10 +196,10 @@ fun StoryScreen(
                                 val viewedCount = visitedChapters.count { it in initialEvidence }
                                 
                                 val isEndOfChapter1 = chapter.id == "chapter_01_1" && viewedCount == 4
-                                val isEndOfChapter3 = chapter.id == "chapter_03_final_files"
+                                val isEndOfChapter3 = chapter.id == "chapter_03_final_files" || chapter.id == "chapter_03_final_files_puzzle"
                                 val isEndOfChapter4 = chapter.id == "chapter_04_restaurant_detail" || chapter.id == "chapter_04_warehouse_discovery"
                                 val isEndOfChapter5 = chapter.id == "chapter_05_end" || chapter.id == "chapter_05_ignore_path" || chapter.id == "chapter_05_drugs_path"
-                                val isEndOfChapter6 = chapter.id == "chapter_06_end"
+                                val isEndOfChapter6 = (chapter.id == "chapter_06_1" && actionPoints == 0)
 
                                 if (isEndOfChapter1 || isEndOfChapter3 || isEndOfChapter4 || isEndOfChapter5 || isEndOfChapter6) {
                                     Button(

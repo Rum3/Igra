@@ -65,7 +65,7 @@ class StoryViewModel @Inject constructor(
             // Reset Action Points for Chapter 6 Hub
             val isReturningFromCh6Sub = currentChapter?.id?.startsWith("chapter_06_") == true && 
                                        currentChapter?.id != "chapter_06_1"
-            if (chapterId == "chapter_06_1" && !isReturningFromCh6Sub) {
+            if ((chapterId == "chapter_06_1" || chapterId == "debug_chapter_06_res") && !isReturningFromCh6Sub) {
                 actionPoints = 2
                 hubChoices.clear()
             }
@@ -136,10 +136,6 @@ class StoryViewModel @Inject constructor(
                 } else {
                     "chapter_06_map_analysis"
                 }
-            }
-
-            if (chapterId == "chapter_06_1" && actionPoints == 0) {
-                targetChapterId = "chapter_06_end"
             }
 
             currentChapter = storyRepository.getChapter(targetChapterId)
