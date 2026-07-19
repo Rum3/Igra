@@ -69,16 +69,16 @@ fun StoryScreen(
                 Box(modifier = Modifier.fillMaxSize().background(Color.Black))
             }
 
-            // 2. Dark Overlay Layer
+            // 2. Dark Overlay Layer (Lightened to make background more visible)
             Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .background(
                         Brush.verticalGradient(
                             colors = listOf(
-                                Color.Black.copy(alpha = 0.5f),
-                                Color.Black.copy(alpha = 0.7f),
-                                Color.Black.copy(alpha = 0.95f)
+                                Color.Black.copy(alpha = 0.1f),
+                                Color.Black.copy(alpha = 0.3f),
+                                Color.Black.copy(alpha = 0.7f)
                             )
                         )
                     )
@@ -155,22 +155,6 @@ fun StoryScreen(
                                             color = Color.White,
                                             textAlign = TextAlign.Justify
                                         )
-
-                                        if (chapter.id == "chapter_02_1" || chapter.id == "chapter_05_camden_hub") {
-                                            Spacer(modifier = Modifier.height(16.dp))
-                                            Surface(
-                                                color = Color.Red.copy(alpha = 0.2f),
-                                                shape = RoundedCornerShape(4.dp),
-                                                border = BorderStroke(1.dp, Color.Red)
-                                            ) {
-                                                Text(
-                                                    text = "ACTION POINTS REMAINING: $actionPoints",
-                                                    modifier = Modifier.padding(8.dp),
-                                                    style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
-                                                    color = Color.White
-                                                )
-                                            }
-                                        }
                                     }
                                 }
                             }
@@ -238,7 +222,7 @@ fun StoryScreen(
 
                                 chapter.choices.forEach { choice ->
                                     val isVisited = visitedChapters.contains(choice.nextChapterId)
-                                    
+
                                     Button(
                                         onClick = { viewModel.makeChoice(choice) },
                                         modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
@@ -248,7 +232,7 @@ fun StoryScreen(
                                         ),
                                         shape = RoundedCornerShape(8.dp),
                                         border = BorderStroke(
-                                            width = 1.dp, 
+                                            width = 1.dp,
                                             color = if (isVisited) Color.Green.copy(alpha = 0.4f) else Color.Red.copy(alpha = 0.4f)
                                         ),
                                         contentPadding = PaddingValues(12.dp)
@@ -284,12 +268,46 @@ fun StoryScreen(
             // 4. Quick Navigation Layer (Top Most)
             Row(
                 modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(top = 40.dp, end = 20.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    .fillMaxWidth()
+                    .padding(top = 40.dp, start = 20.dp, end = 20.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                QuickNavButton(resId = R.drawable.go_to_journal, onClick = onJournalClick)
-                QuickNavButton(resId = R.drawable.go_to_office, onClick = onOfficeClick)
+                // Action Points (Only in Hubs)
+                if (chapter != null && (chapter.id == "chapter_02_1" || chapter.id == "chapter_05_camden_hub" || chapter.id == "chapter_06_1")) {
+                    Surface(
+                        color = Color.Black.copy(alpha = 0.6f),
+                        shape = RoundedCornerShape(8.dp),
+                        border = BorderStroke(1.dp, Color.Red.copy(alpha = 0.5f))
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .size(8.dp)
+                                    .background(Color.Red, CircleShape)
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = "ACTIONS: $actionPoints",
+                                style = MaterialTheme.typography.labelLarge.copy(
+                                    fontWeight = FontWeight.Bold,
+                                    letterSpacing = 1.sp
+                                ),
+                                color = Color.White
+                            )
+                        }
+                    }
+                } else {
+                    Spacer(modifier = Modifier.width(1.dp))
+                }
+
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    QuickNavButton(resId = R.drawable.go_to_journal, onClick = onJournalClick)
+                    QuickNavButton(resId = R.drawable.go_to_office, onClick = onOfficeClick)
+                }
             }
         }
     }

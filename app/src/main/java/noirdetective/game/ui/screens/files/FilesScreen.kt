@@ -47,7 +47,7 @@ fun FilesScreen(
                 .fillMaxSize()
                 .background(
                     Brush.verticalGradient(
-                        colors = listOf(Color.Black.copy(alpha = 0.8f), Color.Black.copy(alpha = 0.95f)),
+                        colors = listOf(Color.Black.copy(alpha = 0.2f), Color.Black.copy(alpha = 0.7f)),
                         startY = 0f
                     )
                 )

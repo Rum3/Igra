@@ -20,4 +20,12 @@ class GameStateRepository(
     suspend fun hasVisitedAll(chapterIds: List<String>): Boolean {
         return chapterVisitDao.getVisitedCount(chapterIds) >= chapterIds.size
     }
+
+    suspend fun hasVisited(chapterId: String): Boolean {
+        return chapterVisitDao.hasVisited(chapterId)
+    }
+
+    suspend fun getAllVisitedChapters(): List<String> {
+        return chapterVisitDao.getAllVisitedIds()
+    }
 }

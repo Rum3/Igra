@@ -16,4 +16,7 @@ interface ChapterVisitDao {
 
     @Query("SELECT EXISTS(SELECT 1 FROM chapter_visits WHERE chapterId = :id)")
     suspend fun hasVisited(id: String): Boolean
+
+    @Query("SELECT chapterId FROM chapter_visits")
+    suspend fun getAllVisitedIds(): List<String>
 }

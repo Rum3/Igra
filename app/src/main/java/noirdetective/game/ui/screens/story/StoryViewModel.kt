@@ -41,6 +41,11 @@ class StoryViewModel @Inject constructor(
         viewModelScope.launch {
             isLoading = true
             
+            // Sync visited chapters from database first
+            val allVisited = gameStateRepository.getAllVisitedChapters()
+            _visitedChapters.clear()
+            _visitedChapters.addAll(allVisited)
+
             // Reset Action Points for Chapter 2 Hub
             val isReturningFromCh2Sub = currentChapter?.id?.startsWith("chapter_02_2") == true
             if (chapterId == "chapter_02_1" && !isReturningFromCh2Sub) {
@@ -71,38 +76,32 @@ class StoryViewModel @Inject constructor(
             // Debug shortcuts (Hidden in title)
             if (chapterId == "debug_chapter_03") {
                 targetChapterId = "chapter_03_1"
-                // Simulate failure in Ch 2:
-                if (!_visitedChapters.contains("chapter_02_outcome_fail")) {
-                    _visitedChapters.add("chapter_02_outcome_fail")
+                // Simulate success in Ch 2 for testing
+                gameStateRepository.recordChapterVisit("chapter_02_outcome_success")
+                if (!_visitedChapters.contains("chapter_02_outcome_success")) {
+                    _visitedChapters.add("chapter_02_outcome_success")
                 }
-                _visitedChapters.remove("chapter_02_outcome_success")
+                _visitedChapters.remove("chapter_02_outcome_fail")
             }
-            
+
             if (chapterId == "debug_chapter_04") {
                 targetChapterId = "chapter_04_1"
-                // Simulate completion of Ch 3
-                if (!visitedChapters.contains("chapter_03_final_files")) {
-                    _visitedChapters.add("chapter_03_final_files")
-                }
+                gameStateRepository.recordChapterVisit("chapter_03_final_files")
+                _visitedChapters.add("chapter_03_final_files")
             }
 
             if (chapterId == "debug_chapter_05") {
                 targetChapterId = "chapter_05_1"
-                // Simulate completion of Ch 4
-                if (!visitedChapters.contains("chapter_04_restaurant_detail")) {
-                    _visitedChapters.add("chapter_04_restaurant_detail")
-                }
+                gameStateRepository.recordChapterVisit("chapter_04_restaurant_detail")
+                _visitedChapters.add("chapter_04_restaurant_detail")
             }
 
             if (chapterId == "debug_chapter_06_res") {
                 targetChapterId = "chapter_06_1"
-                // Simulate Restaurant Path from Ch 4
-                if (!visitedChapters.contains("chapter_04_restaurant_detail")) {
-                    _visitedChapters.add("chapter_04_restaurant_detail")
-                }
-                // Simulate completion of Ch 3 and Ch 5
-                if (!visitedChapters.contains("chapter_03_final_files")) _visitedChapters.add("chapter_03_final_files")
-                if (!visitedChapters.contains("chapter_05_end")) _visitedChapters.add("chapter_05_end")
+                gameStateRepository.recordChapterVisit("chapter_04_restaurant_detail")
+                gameStateRepository.recordChapterVisit("chapter_03_final_files")
+                gameStateRepository.recordChapterVisit("chapter_05_end")
+                _visitedChapters.addAll(listOf("chapter_04_restaurant_detail", "chapter_03_final_files", "chapter_05_end"))
             }
 
             if (chapterId == "chapter_03_check_outcome") {
@@ -114,9 +113,9 @@ class StoryViewModel @Inject constructor(
             }
 
             if (chapterId == "chapter_02_1" && actionPoints == 0) {
-                val hasAutopsy = hubChoices.contains("chapter_02_2b") || hubChoices.contains("chapter_02_2b_full")
-                val hasArthur = hubChoices.contains("chapter_02_2c_final_success")
-                val hasRestaurant = hubChoices.contains("chapter_02_2a") || hubChoices.contains("chapter_02_2a_enter")
+                val hasAutopsy = hubChoices.contains("chapter_02_2b")
+                val hasArthur = hubChoices.contains("chapter_02_2d")
+                val hasRestaurant = hubChoices.contains("chapter_02_2a")
                 
                 targetChapterId = if (hasAutopsy && hasArthur && !hasRestaurant) {
                     "chapter_02_outcome_success"
@@ -150,14 +149,14 @@ class StoryViewModel @Inject constructor(
             if (targetChapterId != chapterId) {
                 gameStateRepository.recordChapterVisit(chapterId)
             }
-            
+
             if (!_visitedChapters.contains(targetChapterId)) {
                 _visitedChapters.add(targetChapterId)
             }
             if (targetChapterId != chapterId && !_visitedChapters.contains(chapterId)) {
                 _visitedChapters.add(chapterId)
             }
-            
+
             // Logic for Chapter 1 initial evidence
             val initialEvidence = listOf("chapter_01_2a", "chapter_01_2b", "chapter_01_2c", "chapter_01_2g")
             if (targetChapterId in initialEvidence) {
@@ -338,7 +337,7 @@ class StoryViewModel @Inject constructor(
     fun makeChoice(choice: Choice) {
         viewModelScope.launch {
             var nextId = choice.nextChapterId
-            
+
             // Special logic for Arthur's pressure path (50% chance of failure)
             if (nextId == "chapter_02_2c_a_roll") {
                 val roll = (1..100).random()
@@ -346,8 +345,8 @@ class StoryViewModel @Inject constructor(
             }
 
             // Check if we are making a move in Chapter 2, 5 or 6 Hub
-            if ((currentChapter?.id == "chapter_02_1" || 
-                 currentChapter?.id == "chapter_05_camden_hub" || 
+            if ((currentChapter?.id == "chapter_02_1" ||
+                 currentChapter?.id == "chapter_05_camden_hub" ||
                  currentChapter?.id == "chapter_06_1") && actionPoints > 0) {
                 actionPoints--
                 hubChoices.add(nextId)
