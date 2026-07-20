@@ -38,7 +38,8 @@ fun NavGraph(navController: NavHostController) {
                 onChapter8Click = { navController.navigate(Screen.Story.createRoute("chapter_08_1")) },
                 onChapter9Click = { navController.navigate(Screen.Story.createRoute("chapter_09_1")) },
                 onChapter10Click = { navController.navigate(Screen.Story.createRoute("chapter_10_1")) },
-                onDebugClick = { navController.navigate(Screen.Story.createRoute("debug_chapter_09")) }
+                onChapter11Click = { navController.navigate(Screen.Story.createRoute("chapter_11_1")) },
+                onDebugClick = { navController.navigate(Screen.Story.createRoute("debug_chapter_10")) }
             )
         }
         

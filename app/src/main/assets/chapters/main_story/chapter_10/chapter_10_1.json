@@ -1,0 +1,15 @@
+{
+  "id": "chapter_10_1",
+  "title": "Morning Scandal",
+  "content": "The morning edition of the 'Daily Gazette' hits your desk like a lead weight. The headline is a punch to the gut:||'THE VANE HOAX: DECEASED JOURNALIST LINKED TO OFFSHORE FORTUNE'||A team of investigative reporters has exposed an offshore account in the Caymans with over £250,000 linked to Vane. The hero of the people is being rebranded as a common extortionist before he's even cold in his grave.||Suddenly, your desk phone rings. It's Arthur Pendleton. He sounds terrified. 'Detective, they're destroying him. I have the Nemesis list. Thomas told me to burn it, but I can't. Meet me at Victoria Station. Now.'||He hangs up before you can even ask a question.",
+  "choices": [
+    {
+      "id": "c10_1_next",
+      "text": "Decide your next move.",
+      "nextChapterId": "chapter_10_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 10,
+  "backgroundImage": "papper"
+}

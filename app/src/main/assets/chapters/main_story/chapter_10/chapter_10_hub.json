@@ -1,0 +1,25 @@
+{
+  "id": "chapter_10_hub",
+  "title": "Blood Money",
+  "content": "The world is closing in on Vane's memory. You need to act fast before the trail is completely scrubbed.||Where will you go?",
+  "choices": [
+    {
+      "id": "c10_h_atlas",
+      "text": "📞 Call your contact about the Atlas payments.",
+      "nextChapterId": "chapter_10_atlas"
+    },
+    {
+      "id": "c10_h_camden",
+      "text": "💸 Trace the physical cash withdrawals in Camden.",
+      "nextChapterId": "chapter_10_camden"
+    },
+    {
+      "id": "c10_h_arthur",
+      "text": "🏃 Meet Arthur Pendleton at Victoria Station.",
+      "nextChapterId": "chapter_10_arthur_meeting"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 10,
+  "backgroundImage": "chapter_1"
+}

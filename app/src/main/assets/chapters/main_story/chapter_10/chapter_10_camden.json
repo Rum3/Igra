@@ -1,0 +1,15 @@
+{
+  "id": "chapter_10_camden",
+  "title": "Street-Level Drain",
+  "content": "The report mentions large cash withdrawals in North London. You cross-reference the locations and dates.||The withdrawals were made at ATMs within walking distance of 'The Void' and the Camden Fish Market. This is 'Cleaners' territory.||It looks like Vane wasn't just investigating the street muscle; he was funding them. Or perhaps, they were the ones extorting him for his silence regarding his addiction.",
+  "choices": [
+    {
+      "id": "c10_camden_back",
+      "text": "Return to the office.",
+      "nextChapterId": "chapter_10_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 10,
+  "backgroundImage": "phone"
+}

@@ -85,6 +85,14 @@ class StoryViewModel @Inject constructor(
                 hubChoices.clear()
             }
 
+            // Reset Action Points for Chapter 10 Hub
+            val isReturningFromCh10Sub = currentChapter?.id?.startsWith("chapter_10_") == true && 
+                                        currentChapter?.id != "chapter_10_hub"
+            if (chapterId == "chapter_10_hub" && !isReturningFromCh10Sub) {
+                actionPoints = 2
+                hubChoices.clear()
+            }
+
             // --- DEBUG REDIRECTS ---
             var targetChapterId = chapterId
             
@@ -108,6 +116,14 @@ class StoryViewModel @Inject constructor(
                 // Simulate previous progress
                 gameStateRepository.recordChapterVisit("chapter_08_hub")
                 _visitedChapters.add("chapter_08_hub")
+            }
+
+            if (chapterId == "debug_chapter_10") {
+                targetChapterId = "chapter_10_1"
+                actionPoints = 2
+                // Simulate previous progress
+                gameStateRepository.recordChapterVisit("chapter_09_hub")
+                _visitedChapters.add("chapter_09_hub")
             }
 
             // --- LOGIC CHECKS ---
@@ -222,7 +238,8 @@ class StoryViewModel @Inject constructor(
                  currentChapter?.id == "chapter_05_camden_hub" || 
                  currentChapter?.id == "chapter_06_1" || 
                  currentChapter?.id == "chapter_08_hub" ||
-                 currentChapter?.id == "chapter_09_hub") && actionPoints > 0) {
+                 currentChapter?.id == "chapter_09_hub" ||
+                 currentChapter?.id == "chapter_10_hub") && actionPoints > 0) {
                 actionPoints--
                 hubChoices.add(nextId)
             }

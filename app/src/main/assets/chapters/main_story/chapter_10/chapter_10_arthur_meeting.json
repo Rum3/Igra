@@ -1,0 +1,15 @@
+{
+  "id": "chapter_10_arthur_meeting",
+  "title": "The Nemesis List",
+  "content": "The cafe is crowded, filled with the indifferent noise of commuters. Arthur slides a folded, stained piece of paper across the table.||'Thomas told me to burn this if he died. But he didn't tell me he was a millionaire,' he whispers bitterly. 'This is the NEMESIS file. It's a list of people he was planning to take down with him if he ever got caught.'||You unfold the paper. It's a list of high-profile targets: Thorne, Miller, leaders of the Cleaners. At the very bottom, your name is written in Vane's neat script, with a single note: **'The only one who can finish it.'**",
+  "choices": [
+    {
+      "id": "c10_art_back",
+      "text": "Return to the office.",
+      "nextChapterId": "chapter_10_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 10,
+  "backgroundImage": "assistent"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "chapter_10_atlas",
+  "title": "A Favor from the Bank",
+  "content": "You pick up the receiver and call an old friend who still works in the fraud department of Vane's bank.||'I'm looking at the records now,' he whispers, his voice crackling over the line. 'The Gazette only scratched the surface. Those \"consulting fees\"? They were wired directly from a Thorne & Co holding account every second Tuesday of the month.'||'It wasn't a one-time thing, Detective. Vane was receiving steady payments for over six months. It looks like he was either Thorne's silent partner... or his personal ghost.'",
+  "choices": [
+    {
+      "id": "c10_atlas_back",
+      "text": "Return to the office.",
+      "nextChapterId": "chapter_10_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 10,
+  "backgroundImage": "phone"
+}
