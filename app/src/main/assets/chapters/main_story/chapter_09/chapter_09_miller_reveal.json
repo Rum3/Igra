@@ -1,0 +1,15 @@
+{
+  "id": "chapter_09_miller_reveal",
+  "title": "The Scars of the Partner",
+  "content": "'Simon Marlow,' Miller whispers, leaning in close. 'Vane's old photographer. Vane ruined him a year ago over some faked photos. Marlow lost everything.'||'We did a sweep of his flat. Found a spare key to Vane's office hidden under his floorboards. Then the lab found it: blood on the keys of Vane's old mechanical typewriter. It matched Marlow's DNA profile perfectly.'||'I even found a draft of a death threat in his trash. Marlow had the motive and the means. He's the perfect fit, Detective. I just couldn't make it stick legally... yet. The DA is being cautious. But he's your killer. I'm sure of it.'||📝 FILES UPDATED: Spare Key, DNA Report, and Threatening Letter added.",
+  "choices": [
+    {
+      "id": "c09_rev_leave",
+      "text": "Leave the precinct and verify the lead.",
+      "nextChapterId": "chapter_09_hub"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 9,
+  "backgroundImage": "chapter_2_navigation"
+}

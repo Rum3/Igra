@@ -1,0 +1,15 @@
+{
+  "id": "chapter_09_1",
+  "title": "A Lead from Inside",
+  "content": "TIME TO MEET MILLER ALONE.||You find him in a secluded corner of the precinct's records room, where the air is stale and the fluorescent lights hum with an annoying buzz.||You don't say much. You simply place the evidence of his 'extracurricular' activities on the table. The offshore transfers, the street meetings—whatever it was, it's enough to end his career.||Miller's bravado evaporates. He looks like a man facing a firing squad. 'Wait, Detective. Don't... don't do anything rash. I have something. A case that's been eating at me. I'll give you the man who really killed Vane.'",
+  "choices": [
+    {
+      "id": "c09_1_listen",
+      "text": "Listen to Miller's offer.",
+      "nextChapterId": "chapter_09_miller_reveal"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 9,
+  "backgroundImage": "miller_confrontation"
+}

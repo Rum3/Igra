@@ -77,6 +77,14 @@ class StoryViewModel @Inject constructor(
                 hubChoices.clear()
             }
 
+            // Reset Action Points for Chapter 9 Hub
+            val isReturningFromCh9Sub = currentChapter?.id?.startsWith("chapter_09_") == true && 
+                                       currentChapter?.id != "chapter_09_hub"
+            if ((chapterId == "chapter_09_hub" || chapterId == "debug_chapter_09") && !isReturningFromCh9Sub) {
+                actionPoints = 1
+                hubChoices.clear()
+            }
+
             // --- DEBUG REDIRECTS ---
             var targetChapterId = chapterId
             
@@ -93,6 +101,13 @@ class StoryViewModel @Inject constructor(
                 // Ensure history exists for Chapter 7
                 gameStateRepository.recordChapterVisit("chapter_07_end")
                 if (!_visitedChapters.contains("chapter_07_end")) _visitedChapters.add("chapter_07_end")
+            }
+
+            if (chapterId == "debug_chapter_09") {
+                targetChapterId = "chapter_09_1"
+                // Simulate previous progress
+                gameStateRepository.recordChapterVisit("chapter_08_hub")
+                _visitedChapters.add("chapter_08_hub")
             }
 
             // --- LOGIC CHECKS ---
@@ -148,6 +163,7 @@ class StoryViewModel @Inject constructor(
                 "chapter_06_dealer_success" -> addChapter6Evidence("the_cleaners")
                 "chapter_06_audit_analysis", "chapter_06_map_analysis" -> addChapter6Evidence("financial_schemes")
                 "chapter_07_end" -> addChapter7Evidence()
+                "chapter_09_miller_reveal" -> addChapter9MillerEvidence()
             }
             
             isLoading = false
@@ -190,13 +206,23 @@ class StoryViewModel @Inject constructor(
         evidenceRepository.updateEvidence(EvidenceItem("surveillance_alert", "Surveillance Photo", "A photo of your office taken from the street.", "Received after meeting Alistair Thorne.", isCollected = true, isPinned = true))
     }
 
+    private suspend fun addChapter9MillerEvidence() {
+        evidenceRepository.updateEvidence(EvidenceItem("marlow_key", "Vane's Spare Office Key", "A silver key found under the floorboards in Marlow's flat.", "Miller claims this was found during a search. It fits the deadbolt on Vane's office door perfectly.", isCollected = true))
+        evidenceRepository.updateEvidence(EvidenceItem("marlow_dna_report", "DNA Forensic Report", "Official lab results for blood found on Vane's typewriter.", "Confirms that the blood found on the mechanical typewriter matches Simon Marlow.", isCollected = true))
+        evidenceRepository.updateEvidence(EvidenceItem("marlow_threat_draft", "Death Threat Draft", "A handwritten note recovered from Marlow's trash.", "A desperate and angry letter addressed to Vane. It clearly outlines Marlow's intent.", isCollected = true, isPinned = true))
+    }
+
     fun makeChoice(choice: Choice) {
         viewModelScope.launch {
             var nextId = choice.nextChapterId
             if (nextId == "chapter_02_2c_a_roll") {
                 nextId = if ((1..100).random() > 50) "chapter_02_2c_a_success" else "chapter_02_2c_a_blocked"
             }
-            if ((currentChapter?.id == "chapter_02_1" || currentChapter?.id == "chapter_05_camden_hub" || currentChapter?.id == "chapter_06_1" || currentChapter?.id == "chapter_08_hub") && actionPoints > 0) {
+            if ((currentChapter?.id == "chapter_02_1" || 
+                 currentChapter?.id == "chapter_05_camden_hub" || 
+                 currentChapter?.id == "chapter_06_1" || 
+                 currentChapter?.id == "chapter_08_hub" ||
+                 currentChapter?.id == "chapter_09_hub") && actionPoints > 0) {
                 actionPoints--
                 hubChoices.add(nextId)
             }

@@ -201,9 +201,16 @@ fun StoryScreen(
                                 val isEndOfChapter5 = chapter.id == "chapter_05_end" || chapter.id == "chapter_05_ignore_path" || chapter.id == "chapter_05_drugs_path"
                                 val isEndOfChapter6 = (chapter.id == "chapter_06_1" && actionPoints == 0)
                                 val isEndOfChapter7 = chapter.id == "chapter_07_end"
-                                val isEndOfChapter8 = (chapter.id == "chapter_08_hub" && actionPoints == 0)
+                                val isEndOfChapter8 = (chapter.id == "chapter_08_hub" && actionPoints == 0) || 
+                                                     chapter.id == "chapter_08_audit" || 
+                                                     chapter.id == "chapter_08_camden_cleaners" || 
+                                                     chapter.id == "chapter_08_camden_mystery" || 
+                                                     chapter.id == "chapter_08_dictaphone"
+                                val isEndOfChapter9 = (chapter.id == "chapter_09_hub" && actionPoints == 0) || 
+                                                     chapter.id == "chapter_09_simon_interrogation" || 
+                                                     chapter.id == "chapter_09_client_meeting"
 
-                                if (isEndOfChapter1 || isEndOfChapter3 || isEndOfChapter4 || isEndOfChapter5 || isEndOfChapter6 || isEndOfChapter7 || isEndOfChapter8) {
+                                if (isEndOfChapter1 || isEndOfChapter3 || isEndOfChapter4 || isEndOfChapter5 || isEndOfChapter6 || isEndOfChapter7 || isEndOfChapter8 || isEndOfChapter9) {
                                     Button(
                                         onClick = onOfficeClick,
                                         modifier = Modifier.fillMaxWidth().height(60.dp),
@@ -222,7 +229,7 @@ fun StoryScreen(
                                     Spacer(modifier = Modifier.height(8.dp))
                                 }
 
-                                if (!isEndOfChapter8) {
+                                if (!isEndOfChapter8 && !isEndOfChapter9) {
                                     chapter.choices.forEach { choice ->
                                         val isVisited = visitedChapters.contains(choice.nextChapterId)
 
@@ -278,7 +285,7 @@ fun StoryScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // Action Points (Only in Hubs)
-                if (chapter != null && (chapter.id == "chapter_02_1" || chapter.id == "chapter_05_camden_hub" || chapter.id == "chapter_06_1" || chapter.id == "chapter_08_hub")) {
+                if (chapter != null && (chapter.id == "chapter_02_1" || chapter.id == "chapter_05_camden_hub" || chapter.id == "chapter_06_1" || chapter.id == "chapter_08_hub" || chapter.id == "chapter_09_hub")) {
                     Surface(
                         color = Color.Black.copy(alpha = 0.6f),
                         shape = RoundedCornerShape(8.dp),

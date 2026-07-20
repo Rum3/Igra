@@ -1,0 +1,20 @@
+{
+  "id": "chapter_09_hub",
+  "title": "One Last Choice",
+  "content": "Miller's information is almost too perfect. You have just enough time for one final verification before the case is taken out of your hands.||Who will you talk to?",
+  "choices": [
+    {
+      "id": "c09_h_simon",
+      "text": "👤 Interrogate Simon Marlow at the precinct.",
+      "nextChapterId": "chapter_09_simon_interrogation"
+    },
+    {
+      "id": "c09_h_client",
+      "text": "💼 Find and talk to one of Marlow's clients.",
+      "nextChapterId": "chapter_09_client_meeting"
+    }
+  ],
+  "caseType": "MAIN",
+  "chapterNumber": 9,
+  "backgroundImage": "chapter_2_navigation"
+}

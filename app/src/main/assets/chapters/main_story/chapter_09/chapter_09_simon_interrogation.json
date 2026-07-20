@@ -1,0 +1,9 @@
+{
+  "id": "chapter_09_simon_interrogation",
+  "title": "A Dead End",
+  "content": "Simon Marlow glares at you through the smoke-stained air of the interrogation room. His jaw is set tight, and his eyes are filled with a mixture of fear and pure spite.||'I have nothing to say to you,' he spits. 'You're just one of Miller's hounds, aren't you? Thomas is dead, my career is dead, and you're just looking for someone to pin it on so you can all go home and sleep soundly.'||'Get out. I'm done talking to police 'consultants'.'",
+  "choices": [],
+  "caseType": "MAIN",
+  "chapterNumber": 9,
+  "backgroundImage": "simon_cell"
+}

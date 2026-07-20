@@ -29,6 +29,7 @@ class OfficeViewModel @Inject constructor(
     var chapter6Completed by mutableStateOf(false)
     var chapter7Completed by mutableStateOf(false)
     var chapter8Completed by mutableStateOf(false)
+    var chapter9Completed by mutableStateOf(false)
 
     init {
         checkProgress()
@@ -68,6 +69,11 @@ class OfficeViewModel @Inject constructor(
             chapter8Completed = gameStateRepository.hasVisited("chapter_08_audit") ||
                                gameStateRepository.hasVisited("chapter_08_camden_check") ||
                                gameStateRepository.hasVisited("chapter_08_dictaphone")
+
+            // Check if Chapter 9 is completed
+            chapter9Completed = gameStateRepository.hasVisited("chapter_09_simon_interrogation") ||
+                               gameStateRepository.hasVisited("chapter_09_client_meeting") ||
+                               gameStateRepository.hasVisited("chapter_09_hub") // Allow completion even if they just saw the hub? No, let's keep it to an action.
         }
     }
 
@@ -96,6 +102,10 @@ class OfficeViewModel @Inject constructor(
     }
 
     fun canProgressToChapter9(): Boolean {
-        return chapter8Completed
+        return chapter8Completed && !chapter9Completed
+    }
+
+    fun canProgressToChapter10(): Boolean {
+        return chapter9Completed
     }
 }
