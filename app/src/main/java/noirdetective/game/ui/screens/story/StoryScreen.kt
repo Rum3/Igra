@@ -201,7 +201,7 @@ fun StoryScreen(
                                 val isEndOfChapter5 = chapter.id == "chapter_05_end" || chapter.id == "chapter_05_ignore_path" || chapter.id == "chapter_05_drugs_path"
                                 val isEndOfChapter6 = (chapter.id == "chapter_06_1" && actionPoints == 0)
                                 val isEndOfChapter7 = chapter.id == "chapter_07_end"
-                                val isEndOfChapter8 = (chapter.id == "chapter_08_1" && actionPoints == 0)
+                                val isEndOfChapter8 = (chapter.id == "chapter_08_hub" && actionPoints == 0)
 
                                 if (isEndOfChapter1 || isEndOfChapter3 || isEndOfChapter4 || isEndOfChapter5 || isEndOfChapter6 || isEndOfChapter7 || isEndOfChapter8) {
                                     Button(
@@ -222,42 +222,44 @@ fun StoryScreen(
                                     Spacer(modifier = Modifier.height(8.dp))
                                 }
 
-                                chapter.choices.forEach { choice ->
-                                    val isVisited = visitedChapters.contains(choice.nextChapterId)
+                                if (!isEndOfChapter8) {
+                                    chapter.choices.forEach { choice ->
+                                        val isVisited = visitedChapters.contains(choice.nextChapterId)
 
-                                    Button(
-                                        onClick = { viewModel.makeChoice(choice) },
-                                        modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
-                                        colors = ButtonDefaults.buttonColors(
-                                            containerColor = if (isVisited) Color.Black.copy(alpha = 0.5f) else Color.DarkGray.copy(alpha = 0.9f),
-                                            contentColor = if (isVisited) Color.Gray else Color.White
-                                        ),
-                                        shape = RoundedCornerShape(8.dp),
-                                        border = BorderStroke(
-                                            width = 1.dp,
-                                            color = if (isVisited) Color.Green.copy(alpha = 0.4f) else Color.Red.copy(alpha = 0.4f)
-                                        ),
-                                        contentPadding = PaddingValues(12.dp)
-                                    ) {
-                                        Row(
-                                            verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.Center
+                                        Button(
+                                            onClick = { viewModel.makeChoice(choice) },
+                                            modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                                            colors = ButtonDefaults.buttonColors(
+                                                containerColor = if (isVisited) Color.Black.copy(alpha = 0.5f) else Color.DarkGray.copy(alpha = 0.9f),
+                                                contentColor = if (isVisited) Color.Gray else Color.White
+                                            ),
+                                            shape = RoundedCornerShape(8.dp),
+                                            border = BorderStroke(
+                                                width = 1.dp,
+                                                color = if (isVisited) Color.Green.copy(alpha = 0.4f) else Color.Red.copy(alpha = 0.4f)
+                                            ),
+                                            contentPadding = PaddingValues(12.dp)
                                         ) {
-                                            if (isVisited) {
-                                                Icon(
-                                                    imageVector = Icons.Default.CheckCircle,
-                                                    contentDescription = null,
-                                                    modifier = Modifier.size(16.dp).padding(end = 8.dp),
-                                                    tint = Color.Green.copy(alpha = 0.6f)
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.Center
+                                            ) {
+                                                if (isVisited) {
+                                                    Icon(
+                                                        imageVector = Icons.Default.CheckCircle,
+                                                        contentDescription = null,
+                                                        modifier = Modifier.size(16.dp).padding(end = 8.dp),
+                                                        tint = Color.Green.copy(alpha = 0.6f)
+                                                    )
+                                                }
+                                                Text(
+                                                    text = choice.text,
+                                                    style = MaterialTheme.typography.bodyMedium.copy(
+                                                        fontWeight = if (isVisited) FontWeight.Normal else FontWeight.Medium
+                                                    ),
+                                                    textAlign = TextAlign.Center
                                                 )
                                             }
-                                            Text(
-                                                text = choice.text,
-                                                style = MaterialTheme.typography.bodyMedium.copy(
-                                                    fontWeight = if (isVisited) FontWeight.Normal else FontWeight.Medium
-                                                ),
-                                                textAlign = TextAlign.Center
-                                            )
                                         }
                                     }
                                 }

@@ -19,4 +19,7 @@ interface ChapterVisitDao {
 
     @Query("SELECT chapterId FROM chapter_visits")
     suspend fun getAllVisitedIds(): List<String>
+
+    @Query("DELETE FROM chapter_visits WHERE chapterId = :id")
+    suspend fun deleteVisit(id: String)
 }

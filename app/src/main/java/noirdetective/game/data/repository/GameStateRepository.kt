@@ -28,4 +28,8 @@ class GameStateRepository(
     suspend fun getAllVisitedChapters(): List<String> {
         return chapterVisitDao.getAllVisitedIds()
     }
+
+    suspend fun deleteChapterVisit(chapterId: String) {
+        chapterVisitDao.deleteVisit(chapterId)
+    }
 }
